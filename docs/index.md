@@ -1,7 +1,6 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 # layout: home
-
 # hero:
 #   name: "Phitter Documentation"
 #   text: "A VitePress Site"
