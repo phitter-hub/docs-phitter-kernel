@@ -19,23 +19,19 @@ import { useData } from "vitepress";
 export default defineComponent({
     data() {
         return {
-            isDarkTheme: false,
-            isDark: null as any,
+            isDarkTheme: false
         };
     },
     mounted() {
         const { isDark } = useData();
         this.isDarkTheme = isDark.value;
-        this.isDark = isDark;
-    },
-    watch: {
-        isDark: {
-            handler(newValue: boolean) {
+        
+        this.$watch(
+            () => isDark.value,
+            (newValue: boolean) => {
                 this.isDarkTheme = newValue;
-                console.log(`Tema cambiado a: ${newValue ? "oscuro" : "claro"}`);
-            },
-            immediate: true,
-        },
-    },
+            }
+        );
+    }
 });
 </script>

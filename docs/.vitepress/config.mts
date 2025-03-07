@@ -1,62 +1,158 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "phitter-docs",
-  description: "A VitePress Site",
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/simulation/queue-simulation/own-distribution' },
-      { text: 'nepe', link: '/simulation/api-examples' }
-    ],
-
-    sidebar: [
-      {
-        text: 'Fit',
-        collapsed: true,
-        items: [
-          { text: 'Markdown Examples', link: '/fit/markdown-examples' },
-          // { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      },
-      {
-        text: 'Simulation',
-        collapsed: true,
-        items: [
-          {
-            text: 'Queue Simulation',
-            collapsed: true,
-            items: [
-              { text: 'Own Distribution', link: '/simulation/queue-simulation/own-distribution' },
-              // { text: 'Markdown Examples', link: '/markdown-examples' },
-              { text: 'Create Queue Simulation Instance', link: '/simulation/queue-simulation/create-queue-instance' },
-              { text: 'Run Queue Instance', link: '/simulation/queue-simulation/run-queue-simulation' },
-              { text: 'Queue Simulation Metrics', link: '/simulation/queue-simulation/queue-metrics' },
-              { text: 'Queue Simulation Probabilities', link: '/simulation/queue-simulation/queue-probabilities' },
-              { text: 'Confidence Interval for Simulation Metrics', link: '/simulation/queue-simulation/queue-confidence-interval' },
-            ]
-          },
-          {
-            text: 'Process Simulation',
-            collapsed: true,
-            items: [
-              // { text: 'Markdown Examples', link: '/markdown-examples' },
-              { text: 'Create Instance Simulation', link: '/simulation/process-simulation/create-instance-simulation' },
-              { text: 'Create a Process Simulation', link: '/simulation/process-simulation/create-process' },
-              { text: 'Graph Process Simulation', link: '/simulation/process-simulation/graph-process' },
-              { text: 'Run a Process Simulation', link: '/simulation/process-simulation/run-simulation' },
-              { text: 'Simulation Metrics', link: '/simulation/process-simulation/simulation-metrics' },
-              { text: 'Confidence Interval of Metrics', link: '/simulation/process-simulation/confidence-interval' },
-            ]
-          },
-        ]
-      }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/phitterio/phitter-kernel' }
-    ]
-  }
-})
+    title: "PHITTER DOCS",
+    description: "A VitePress Site",
+    themeConfig: {
+        nav: [
+            { text: "Home", link: "/" },
+            { text: "Examples", link: "/simulation/queue-simulation/own-distribution" },
+            { text: "nepe", link: "/simulation/api-examples" },
+        ],
+        sidebar: [
+            {
+                text: "Fit",
+                collapsed: true,
+                items: [
+                    { text: "Phitter Python", link: "/fit/markdown-examples.md" },
+                    { text: "Benchmarks", link: "/fit/markdown-examples.md" },
+                ],
+            },
+            {
+                text: "Simulation",
+                collapsed: true,
+                items: [
+                    {
+                        text: "Queue Simulation",
+                        collapsed: true,
+                        items: [
+                            { text: "Own Distribution", link: "/simulation/queue-simulation/own-distribution.md" },
+                            { text: "Create Queue Simulation Instance", link: "/simulation/queue-simulation/create-queue-instance.md" },
+                            { text: "Run Queue Instance", link: "/simulation/queue-simulation/run-queue-simulation.md" },
+                            { text: "Queue Simulation Metrics", link: "/simulation/queue-simulation/queue-metrics.md" },
+                            { text: "Queue Simulation Probabilities", link: "/simulation/queue-simulation/queue-probabilities.md" },
+                            { text: "Confidence Interval for Simulation Metrics", link: "/simulation/queue-simulation/queue-confidence-interval.md" },
+                        ],
+                    },
+                    {
+                        text: "Process Simulation",
+                        collapsed: true,
+                        items: [
+                            { text: "Create Instance Simulation", link: "/simulation/process-simulation/create-instance-simulation.md" },
+                            { text: "Create a Process Simulation", link: "/simulation/process-simulation/create-process.md" },
+                            { text: "Graph Process Simulation", link: "/simulation/process-simulation/graph-process.md" },
+                            { text: "Run a Process Simulation", link: "/simulation/process-simulation/run-simulation.md" },
+                            { text: "Simulation Metrics", link: "/simulation/process-simulation/simulation-metrics.md" },
+                            { text: "Confidence Interval of Metrics", link: "/simulation/process-simulation/confidence-interval.md" },
+                        ],
+                    },
+                ],
+            },
+            {
+                text: "Distributions",
+                link: "/distributions/distributions.md",
+                collapsed: true,
+                items: [
+                    // { text: "Summarize", collapsed: true, link: "/distributions/summarize.md" },
+                    {
+                        text: "Continuous",
+                        collapsed: true,
+                        items: [
+                            { text: "Alpha", collapsed: true, link: "/distributions/continuous/alpha.md" },
+                            { text: "Arcsine", collapsed: true, link: "/distributions/continuous/arcsine.md" },
+                            { text: "Argus", collapsed: true, link: "/distributions/continuous/argus.md" },
+                            { text: "Beta", collapsed: true, link: "/distributions/continuous/beta.md" },
+                            { text: "Beta Prime", collapsed: true, link: "/distributions/continuous/beta_prime.md" },
+                            { text: "Beta Prime 4P", collapsed: true, link: "/distributions/continuous/beta_prime_4p.md" },
+                            { text: "Bradford", collapsed: true, link: "/distributions/continuous/bradford.md" },
+                            { text: "Burr", collapsed: true, link: "/distributions/continuous/burr.md" },
+                            { text: "Burr 4P", collapsed: true, link: "/distributions/continuous/burr_4p.md" },
+                            { text: "Cauchy", collapsed: true, link: "/distributions/continuous/cauchy.md" },
+                            { text: "Chi Square", collapsed: true, link: "/distributions/continuous/chi_square.md" },
+                            { text: "Chi Square 3P", collapsed: true, link: "/distributions/continuous/chi_square_3p.md" },
+                            { text: "Dagum", collapsed: true, link: "/distributions/continuous/dagum.md" },
+                            { text: "Dagum 4P", collapsed: true, link: "/distributions/continuous/dagum_4p.md" },
+                            { text: "Erlang", collapsed: true, link: "/distributions/continuous/erlang.md" },
+                            { text: "Erlang 3P", collapsed: true, link: "/distributions/continuous/erlang_3p.md" },
+                            { text: "Error Function", collapsed: true, link: "/distributions/continuous/error_function.md" },
+                            { text: "Exponential", collapsed: true, link: "/distributions/continuous/exponential.md" },
+                            { text: "Exponential 2P", collapsed: true, link: "/distributions/continuous/exponential_2p.md" },
+                            { text: "F", collapsed: true, link: "/distributions/continuous/f.md" },
+                            { text: "F 4P", collapsed: true, link: "/distributions/continuous/f_4p.md" },
+                            { text: "Fatigue Life", collapsed: true, link: "/distributions/continuous/fatigue_life.md" },
+                            { text: "Folded Normal", collapsed: true, link: "/distributions/continuous/folded_normal.md" },
+                            { text: "Frechet", collapsed: true, link: "/distributions/continuous/frechet.md" },
+                            { text: "Gamma", collapsed: true, link: "/distributions/continuous/gamma.md" },
+                            { text: "Gamma 3P", collapsed: true, link: "/distributions/continuous/gamma_3p.md" },
+                            { text: "Generalized Extreme Value", collapsed: true, link: "/distributions/continuous/generalized_extreme_value.md" },
+                            { text: "Generalized Gamma", collapsed: true, link: "/distributions/continuous/generalized_gamma.md" },
+                            { text: "Generalized Gamma 4P", collapsed: true, link: "/distributions/continuous/generalized_gamma_4p.md" },
+                            { text: "Generalized Logistic", collapsed: true, link: "/distributions/continuous/generalized_logistic.md" },
+                            { text: "Generalized Normal", collapsed: true, link: "/distributions/continuous/generalized_normal.md" },
+                            { text: "Generalized Pareto", collapsed: true, link: "/distributions/continuous/generalized_pareto.md" },
+                            { text: "Gibrat", collapsed: true, link: "/distributions/continuous/gibrat.md" },
+                            { text: "Gumbel Left", collapsed: true, link: "/distributions/continuous/gumbel_left.md" },
+                            { text: "Gumbel Right", collapsed: true, link: "/distributions/continuous/gumbel_right.md" },
+                            { text: "Half Normal", collapsed: true, link: "/distributions/continuous/half_normal.md" },
+                            { text: "Hyperbolic Secant", collapsed: true, link: "/distributions/continuous/hyperbolic_secant.md" },
+                            { text: "Inverse Gamma", collapsed: true, link: "/distributions/continuous/inverse_gamma.md" },
+                            { text: "Inverse Gamma 3P", collapsed: true, link: "/distributions/continuous/inverse_gamma_3p.md" },
+                            { text: "Inverse Gaussian", collapsed: true, link: "/distributions/continuous/inverse_gaussian.md" },
+                            { text: "Inverse Gaussian 3P", collapsed: true, link: "/distributions/continuous/inverse_gaussian_3p.md" },
+                            { text: "Johnson SB", collapsed: true, link: "/distributions/continuous/johnson_sb.md" },
+                            { text: "Johnson SU", collapsed: true, link: "/distributions/continuous/johnson_su.md" },
+                            { text: "Kumaraswamy", collapsed: true, link: "/distributions/continuous/kumaraswamy.md" },
+                            { text: "Laplace", collapsed: true, link: "/distributions/continuous/laplace.md" },
+                            { text: "Levy", collapsed: true, link: "/distributions/continuous/levy.md" },
+                            { text: "Loggamma", collapsed: true, link: "/distributions/continuous/loggamma.md" },
+                            { text: "Logistic", collapsed: true, link: "/distributions/continuous/logistic.md" },
+                            { text: "Loglogistic", collapsed: true, link: "/distributions/continuous/loglogistic.md" },
+                            { text: "Loglogistic 3P", collapsed: true, link: "/distributions/continuous/loglogistic_3p.md" },
+                            { text: "Lognormal", collapsed: true, link: "/distributions/continuous/lognormal.md" },
+                            { text: "Maxwell", collapsed: true, link: "/distributions/continuous/maxwell.md" },
+                            { text: "Moyal", collapsed: true, link: "/distributions/continuous/moyal.md" },
+                            { text: "Nakagami", collapsed: true, link: "/distributions/continuous/nakagami.md" },
+                            { text: "Non Central Chi Square", collapsed: true, link: "/distributions/continuous/non_central_chi_square.md" },
+                            { text: "Non Central F", collapsed: true, link: "/distributions/continuous/non_central_f.md" },
+                            { text: "Non Central T Student", collapsed: true, link: "/distributions/continuous/non_central_t_student.md" },
+                            { text: "Normal", collapsed: true, link: "/distributions/continuous/normal.md" },
+                            { text: "Pareto First Kind", collapsed: true, link: "/distributions/continuous/pareto_first_kind.md" },
+                            { text: "Pareto Second Kind", collapsed: true, link: "/distributions/continuous/pareto_second_kind.md" },
+                            { text: "Pert", collapsed: true, link: "/distributions/continuous/pert.md" },
+                            { text: "Power Function", collapsed: true, link: "/distributions/continuous/power_function.md" },
+                            { text: "Rayleigh", collapsed: true, link: "/distributions/continuous/rayleigh.md" },
+                            { text: "Reciprocal", collapsed: true, link: "/distributions/continuous/reciprocal.md" },
+                            { text: "Rice", collapsed: true, link: "/distributions/continuous/rice.md" },
+                            { text: "Semicircular", collapsed: true, link: "/distributions/continuous/semicircular.md" },
+                            { text: "T Student", collapsed: true, link: "/distributions/continuous/t_student.md" },
+                            { text: "T Student 3P", collapsed: true, link: "/distributions/continuous/t_student_3p.md" },
+                            { text: "Trapezoidal", collapsed: true, link: "/distributions/continuous/trapezoidal.md" },
+                            { text: "Triangular", collapsed: true, link: "/distributions/continuous/triangular.md" },
+                            { text: "Uniform", collapsed: true, link: "/distributions/continuous/uniform.md" },
+                            { text: "Weibull", collapsed: true, link: "/distributions/continuous/weibull.md" },
+                            { text: "Weibull 3P", collapsed: true, link: "/distributions/continuous/weibull_3p.md" },
+                        ],
+                    },
+                    {
+                        text: "Discrete",
+                        collapsed: true,
+                        items: [
+                            { text: "Bernoulli", collapsed: true, link: "/distributions/discrete/bernoulli.md" },
+                            { text: "Binomial", collapsed: true, link: "/distributions/discrete/binomial.md" },
+                            { text: "Geometric", collapsed: true, link: "/distributions/discrete/geometric.md" },
+                            { text: "Hypergeometric", collapsed: true, link: "/distributions/discrete/hypergeometric.md" },
+                            { text: "Logarithmic", collapsed: true, link: "/distributions/discrete/logarithmic.md" },
+                            { text: "Negative Binomial", collapsed: true, link: "/distributions/discrete/negative_binomial.md" },
+                            { text: "Poisson", collapsed: true, link: "/distributions/discrete/poisson.md" },
+                            { text: "Uniform", collapsed: true, link: "/distributions/discrete/uniform.md" },
+                        ],
+                    },
+                ],
+            },
+        ],
+        socialLinks: [{ icon: "github", link: "https://github.com/phitterio/phitter-kernel" }],
+    },
+    markdown: {
+        math: true,
+    },
+});
