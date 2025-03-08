@@ -15,7 +15,7 @@ distribution = phitter.continuous.F({"df1": *, "df2": *})
 **Distribution Methods and Attributes**
 
 ```python
-## CDF, PDF, PPF, PMF receive float or numpy.ndarray. For discrete distributions PMF instead of PDF. Parameters notation are in description of ditribution
+## CDF, PDF, PPF receive float or numpy.ndarray.
 distribution.cdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.pdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.ppf(float | numpy.ndarray) # -> float | numpy.ndarray

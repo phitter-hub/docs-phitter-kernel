@@ -7,7 +7,7 @@
 ```python
 import phitter
 
-distribution = phitter.continuous.F_4P({"df1": *, "df2": *, "loc": *, "scale": *})
+distribution = phitter.continuous.F4P({"df1": *, "df2": *, "loc": *, "scale": *})
 ```
 
 > 💡 The distribution's parameters are defined equation section below
@@ -15,7 +15,7 @@ distribution = phitter.continuous.F_4P({"df1": *, "df2": *, "loc": *, "scale": *
 **Distribution Methods and Attributes**
 
 ```python
-## CDF, PDF, PPF, PMF receive float or numpy.ndarray. For discrete distributions PMF instead of PDF. Parameters notation are in description of ditribution
+## CDF, PDF, PPF receive float or numpy.ndarray.
 distribution.cdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.pdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.ppf(float | numpy.ndarray) # -> float | numpy.ndarray

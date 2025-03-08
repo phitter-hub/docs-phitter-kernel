@@ -7,7 +7,7 @@
 ```python
 import phitter
 
-distribution = phitter.discrete.UNIFORM({"min": *, "max": *})
+distribution = phitter.discrete.Uniform({"min": *, "max": *})
 ```
 
 > 💡 The distribution's parameters are defined equation section below
@@ -15,10 +15,10 @@ distribution = phitter.discrete.UNIFORM({"min": *, "max": *})
 **Distribution Methods and Attributes**
 
 ```python
-## CDF, PDF, PPF, PMF receive float or numpy.ndarray. For discrete distributions PMF instead of PDF. Parameters notation are in description of ditribution
-distribution.cdf(int | numpy.ndarray) # -> float | numpy.ndarray
-distribution.pdf(int | numpy.ndarray) # -> float | numpy.ndarray
-distribution.ppf(int | numpy.ndarray) # -> float | numpy.ndarray
+## CDF, PMF, PPF receive float or numpy.ndarray.
+distribution.cdf(int | numpy.ndarray[int]) # -> float | numpy.ndarray
+distribution.pmf(int | numpy.ndarray[int]) # -> float | numpy.ndarray
+distribution.ppf(int | numpy.ndarray[int]) # -> float | numpy.ndarray
 distribution.sample(int) # -> numpy.ndarray
 
 ## STATS
@@ -27,8 +27,8 @@ distribution.variance # -> float
 distribution.standard_deviation # -> float
 distribution.skewness # -> float
 distribution.kurtosis # -> float
-distribution.median # -> float
-distribution.mode # -> float
+distribution.median # -> int
+distribution.mode # -> int
 ```
 
 ## Equations

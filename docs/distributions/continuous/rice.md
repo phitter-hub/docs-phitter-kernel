@@ -7,7 +7,7 @@
 ```python
 import phitter
 
-distribution = phitter.continuous.RICE({"v": *, "sigma": *})
+distribution = phitter.continuous.Rice({"v": *, "sigma": *})
 ```
 
 > 💡 The distribution's parameters are defined equation section below
@@ -15,7 +15,7 @@ distribution = phitter.continuous.RICE({"v": *, "sigma": *})
 **Distribution Methods and Attributes**
 
 ```python
-## CDF, PDF, PPF, PMF receive float or numpy.ndarray. For discrete distributions PMF instead of PDF. Parameters notation are in description of ditribution
+## CDF, PDF, PPF receive float or numpy.ndarray.
 distribution.cdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.pdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.ppf(float | numpy.ndarray) # -> float | numpy.ndarray
@@ -73,8 +73,7 @@ $$ \mathrm{Median}(X)=F^{-1}_{X}\left(\frac{1}{2}\right) $$
 $$ \mathrm{Mode}(X)=\arg\max_{x}f_{X}\left(x\right) $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not}$
-$\text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not} \\ \text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
 - $\Phi^{-1}\left(u,mean,variance\right):\text{Inverse of cumulative function from normal distribution}$
 - $L_{r}\left(x\right): \text{Laguerre polynomials of order }r\in\mathbb{R}$
 - $L_{\frac{1}{2}}\left(x\right)=e^{x/2} (x) I_{1}\left(\frac{x}{2}\right)-e^{x/2} (x-1) I_{0}\left(\frac{x}{2}\right)$

@@ -7,7 +7,7 @@
 ```python
 import phitter
 
-distribution = phitter.continuous.GENERALIZED_LOGISTIC({"c": *, "loc": *, "scale": *})
+distribution = phitter.continuous.GeneralizedLogistic({"c": *, "loc": *, "scale": *})
 ```
 
 > 💡 The distribution's parameters are defined equation section below
@@ -15,7 +15,7 @@ distribution = phitter.continuous.GENERALIZED_LOGISTIC({"c": *, "loc": *, "scale
 **Distribution Methods and Attributes**
 
 ```python
-## CDF, PDF, PPF, PMF receive float or numpy.ndarray. For discrete distributions PMF instead of PDF. Parameters notation are in description of ditribution
+## CDF, PDF, PPF receive float or numpy.ndarray.
 distribution.cdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.pdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.ppf(float | numpy.ndarray) # -> float | numpy.ndarray

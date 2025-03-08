@@ -1,16 +1,25 @@
-<div>
-    <img
-        v-show="!isDarkTheme"
-        class="light-mode"
-        src="https://gist.githubusercontent.com/phitterio/170ce460d7e766545265772525edecf6/raw/71b4867c6e5683455cf1d68bea5bea7eda55ce7d/LightPhitterLogo.svg"
-        alt="Light Mode Logo"
-    />
-    <img
-        v-show="isDarkTheme"
-        src="https://gist.githubusercontent.com/phitterio/66bc7f3674eac01ae646e30ba697a6d7/raw/e96dbba0eb26b20d35e608fefc3984bd87f0010b/DarkPhitterLogo.svg"
-        alt="Dark Mode Logo"
-    />
+<div class="logo-container">
+    <LightPhitterLogo v-show="!isDarkTheme" class="logo" />
+    <DarkPhitterLogo v-show="isDarkTheme" class="logo" />    
 </div>
+
+<p>
+    Phitter analyzes datasets and determines the best analytical probability distributions that represent them. Phitter studies over 80 probability distributions, both continuous and discrete, 3 goodness-of-fit tests, and interactive visualizations. For each selected probability distribution, a standard modeling guide is provided along with spreadsheets that detail the methodology for using the chosen distribution in data science, operations research, and artificial intelligence.
+</p>
+
+<p>
+    In addition, Phitter offers the capability to perform process simulations, allowing users to graph and observe minimum times for specific observations. It also supports queue simulations with flexibility to configure various parameters, such as the number of servers, maximum population size, system capacity, and different queue disciplines, including First-In-First-Out (FIFO), Last-In-First-Out (LIFO), and priority-based service (PBS).
+</p>
+
+<p>
+    This repository contains the implementation of the python library and the kernel of <a href="https://phitter.io" target="_blank">Phitter Web</a>
+</p>
+
+
+<!--
+<MiComponente titulo="Sección personalizada" descripcion="Este componente fue integrado en Markdown">
+  Aquí puedo añadir contenido adicional que irá en el slot.
+</MiComponente> -->
 
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -35,3 +44,15 @@ export default defineComponent({
     }
 });
 </script>
+
+<style>
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 400px;
+}
+</style>

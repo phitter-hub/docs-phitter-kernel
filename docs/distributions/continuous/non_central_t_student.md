@@ -7,7 +7,7 @@
 ```python
 import phitter
 
-distribution = phitter.continuous.NON_CENTRAL_T_STUDENT({"lambda": *, "n": *, "loc": *, "scale": *})
+distribution = phitter.continuous.NonCentralTStudent({"lambda": *, "n": *, "loc": *, "scale": *})
 ```
 
 > 💡 The distribution's parameters are defined equation section below
@@ -15,7 +15,7 @@ distribution = phitter.continuous.NON_CENTRAL_T_STUDENT({"lambda": *, "n": *, "l
 **Distribution Methods and Attributes**
 
 ```python
-## CDF, PDF, PPF, PMF receive float or numpy.ndarray. For discrete distributions PMF instead of PDF. Parameters notation are in description of ditribution
+## CDF, PDF, PPF receive float or numpy.ndarray.
 distribution.cdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.pdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.ppf(float | numpy.ndarray) # -> float | numpy.ndarray
@@ -73,9 +73,8 @@ $$ \mathrm{Median}(X)=F^{-1}_{X}\left(\frac{1}{2}\right) $$
 $$ \mathrm{Mode}(X)=\arg\max_{x}f_{X}\left(x\right) $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not}$
-$\text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
 - $\tilde{X}\sim\mathrm{NonCentralTStudent}\left(\lambda,n,0,1\right)$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not} \\ \text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
 - $\text{Loc}:\text{Location parameter}$
 - $\text{Sc}:\text{Scale parameter}$
 - $z\left(x\right)=\left(x-\text{Loc}\right)/\text{Sc}$

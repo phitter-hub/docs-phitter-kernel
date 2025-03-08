@@ -7,7 +7,7 @@
 ```python
 import phitter
 
-distribution = phitter.continuous.FOLDED_NORMAL({"mu": *, "sigma": *})
+distribution = phitter.continuous.FoldedNormal({"mu": *, "sigma": *})
 ```
 
 > 💡 The distribution's parameters are defined equation section below
@@ -15,7 +15,7 @@ distribution = phitter.continuous.FOLDED_NORMAL({"mu": *, "sigma": *})
 **Distribution Methods and Attributes**
 
 ```python
-## CDF, PDF, PPF, PMF receive float or numpy.ndarray. For discrete distributions PMF instead of PDF. Parameters notation are in description of ditribution
+## CDF, PDF, PPF receive float or numpy.ndarray.
 distribution.cdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.pdf(float | numpy.ndarray) # -> float | numpy.ndarray
 distribution.ppf(float | numpy.ndarray) # -> float | numpy.ndarray
@@ -73,8 +73,7 @@ $$ \mathrm{Median}(X)=\left|\mu+\sigma\Phi^{-1}\left(1/2\right)\right| $$
 $$ \mathrm{Mode}(X)=\arg\max_{x}f_{X}\left(x\right) $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not}$
-$\text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not} \\ \text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
 - $\mu:\text{Location parameter}$
 - $\sigma:\text{Scale parameter}$
 - $u:\text{Uniform[0,1] random varible}$
