@@ -33,10 +33,23 @@ export default defineConfig({
                         { text: "Continuous Fit Results", link: "documentation/fit/continuous/continuous-results" },
                         
                     ]},
-                    { text: "Discrete", collapsed: true, items: []},
+                    { text: "Discrete", collapsed: true, items: [
+                        { text: "Create Discrete Fit Object", link: "documentation/fit/discrete/create-discrete" },
+                        { text: "Run Discrete Fit", link: "documentation/fit/discrete/run-discrete-fit" },
+                        { text: "Discrete Fit Results", link: "documentation/fit/discrete/discrete-results" },
+                        
+                    ]},
+                    { text: "Accelerate Fit", collapsed: true, items: [
+                        { text: "Speed up for large datasets", link: "documentation/fit/accelerate/speed-up-large-datasets" }, 
+                    ]},
                     { text: "Graphs", collapsed: true, items: [
                         { text: "Plot Data Histogram", link: "documentation/fit/graphs/data-histogram" },
-                        { text: "Plot Distribution Histogram", link: "documentation/fit/graphs/distribution-histogram" },
+                        { text: "Plot a Certain Distribution", link: "documentation/fit/graphs/plot-distribution" },
+                        { text: "Plot Several Distributions", link: "documentation/fit/graphs/several-distribution-histogram" },
+                        { text: "Plot ECDF of your Data", link: "documentation/fit/graphs/plot-ecdf" },
+                        { text: "Plot ECDF of your Data vs. Distribution", link: "documentation/fit/graphs/plot-ecdf-distribution" },
+                        { text: "Plot Quantile-Quantile (QQ)", link: "documentation/fit/graphs/plot-qq" },
+                        { text: "Plot Quantile-Quantile (QQ) with a Regression Line", link: "documentation/fit/graphs/plot-qq-regression" },
                     ]},
                 ],
             },
@@ -75,7 +88,7 @@ export default defineConfig({
                 link: "/documentation/distributions/distributions",
                 collapsed: true,
                 items: [
-                    // { text: "Summarize", collapsed: true, link: "/distributions/summarize" },
+                    { text: "Quick Example", collapsed: true, link: "/documentation/distributions/quick-example" },
                     {
                         text: "Continuous",
                         collapsed: true,

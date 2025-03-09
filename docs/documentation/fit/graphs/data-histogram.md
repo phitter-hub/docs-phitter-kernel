@@ -13,6 +13,8 @@ If you want to plot a histogram use the method `.plot_histogram()` that has the 
 - `plotly_plot_renderer` (_"png" | "jpeg" | "svg" | None_): Image format for exporting the plot when using Plotly. If `None`, the default setting is used.
 - `plot_engine` (_"plotly" | "matplotlib"_): Plotting engine to use. Default is `"plotly"`.
 
+If you only want to use the basic code, use it as follows:
+
 ```python
 phi.plot_histogram()
 ```

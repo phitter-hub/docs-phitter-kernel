@@ -15,7 +15,6 @@
     This repository contains the implementation of the python library and the kernel of <a href="https://phitter.io" target="_blank">Phitter Web</a>
 </p>
 
-
 <!--
 <MiComponente titulo="Sección personalizada" descripcion="Este componente fue integrado en Markdown">
   Aquí puedo añadir contenido adicional que irá en el slot.

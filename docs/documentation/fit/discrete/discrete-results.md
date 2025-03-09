@@ -1,4 +1,4 @@
-# Continuous Fit Results
+# Discrete Fit Results
 
 After running your fit, you can use other methods to review the results.
 
@@ -39,10 +39,10 @@ If you want to have the parameters of your distribution use the method `.get_par
 `id_distribution (str)`: Name of the distribution that you need.
 
 ```python
-phi.get_parameters(id_distribution="weibull") -> dict
+phi.get_parameters(id_distribution="binomial") -> dict
 ```
 
-> 💡 Remember to change `weibull` with the distribution that you need
+> 💡 Remember to change `binomial` with the distribution that you need
 
 ### Get sum squared error by `id_distribution`
 
@@ -51,10 +51,10 @@ If you want to have the sum squared error (SSE) of your distribution use the met
 `id_distribution (str)`: Name of the distribution that you need.
 
 ```python
-phi.get_sse(id_distribution="weibull") -> dict
+phi.get_sse(id_distribution="binomial") -> dict
 ```
 
-> 💡 Remember to change `weibull` with the distribution that you need
+> 💡 Remember to change `binomial` with the distribution that you need
 
 ### Get results of the kolmogorov smirnov by `id_distribution`
 
@@ -63,7 +63,7 @@ If you want to have the results of the kolmogorov smirnov of your distribution u
 `id_distribution (str)`: Name of the distribution that you need.
 
 ```python
-phi.get_test_kolmogorov_smirnov(id_distribution="weibull") -> dict
+phi.get_test_kolmogorov_smirnov(id_distribution="binomial") -> dict
 ```
 
-> 💡 Remember to change `weibull` with the distribution that you need
+> 💡 Remember to change `binomial` with the distribution that you need

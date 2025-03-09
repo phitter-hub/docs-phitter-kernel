@@ -18,4 +18,4 @@ Remember to change `0.7.2` with the version that you need.
 
 Please go to [Release notes](/release/release-main.md) to review the different versions.
 
-> 💡*Phitter team recommend to use the last version as it is the most stable*
+> 💡*Phitter team recommends to use the last version as it is the most stable*

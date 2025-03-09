@@ -1,6 +1,6 @@
-# Plot Distribution Histogram
+# Plot Several Distributions
 
-If you want to plot a histogram eith your data and with the distributions, use the method `.plot_histogram_distributions()` that has the following parameters:
+If you want to plot a histogram with your data and with all the possible [distributions](/documentation/distributions/distributions.md), use the method `.plot_histogram_distributions()` that has the following parameters:
 
 - `n_distributions` (_int_): Number of distributions to consider. Default is `10`.
 - `n_distributions_visible` (_int_): Number of distributions visible in the plot. Default is `1`.
@@ -14,6 +14,8 @@ If you want to plot a histogram eith your data and with the distributions, use t
 - `plot_bargap` (_float_): Spacing between bars (value between `0` and `1`). Default is `0.15`.
 - `plotly_plot_renderer` (_"png" | "jpeg" | "svg" | None_): Image format for exporting the plot when using Plotly. If `None`, the default setting is used.
 - `plot_engine` (_"plotly" | "matplotlib"_): Plotting engine to use. Default is `"plotly"`.
+
+If you only want to use the basic code, use it as follows:
 
 ```pyther
 plot_histogram_distributions
