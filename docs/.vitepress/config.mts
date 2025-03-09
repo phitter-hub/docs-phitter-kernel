@@ -18,8 +18,9 @@ export default defineConfig({
                 text: "Fit",
                 collapsed: true,
                 items: [
-                    { text: "Phitter Python", link: "/fit/markdown-examples" },
-                    { text: "Benchmarks", link: "/fit/markdown-examples" },
+                    { text: "General Fit", link: "/fit/markdown-examples" },
+                    { text: "Continuous Fit", link: "/fit/markdown-examples" },
+                    { text: "Discrete Fit", link: "/fit/markdown-examples" },
                 ],
             },
             {
