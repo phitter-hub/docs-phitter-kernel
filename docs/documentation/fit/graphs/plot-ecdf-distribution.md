@@ -13,7 +13,7 @@
 For a dataset with `n` values, the ECDF at a given point `x` is calculated as:
 
 $$
-ECDF(x) = \frac{\text{Number of values} \leq x}{n}
+\text{ECDF(x)} = \frac{\text{Number of values} \leq x}{n}
 $$
 
 Each step in the ECDF plot corresponds to an observed data point.
@@ -52,7 +52,7 @@ If you want to plot the ECDF of your data against a specific ECDF of other [dist
 
 If you only want to use the basic code, use it as follows:
 
-```pyther
+```python
 phi.plot_ecdf_distribution(id_distribution="weibull")
 ```
 

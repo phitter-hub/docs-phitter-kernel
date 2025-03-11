@@ -17,7 +17,7 @@ If you want to plot a histogram with your data and with all the possible [distri
 
 If you only want to use the basic code, use it as follows:
 
-```pyther
+```python
 plot_histogram_distributions
 ```
 

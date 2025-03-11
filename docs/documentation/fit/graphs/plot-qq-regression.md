@@ -31,7 +31,7 @@ If you want to plot QQ with your data and with a regression line, use the method
 
 If you only want to use the basic code, use it as follows:
 
-```pyther
+```python
 phi.qq_plot_regression(id_distribution="weibull")
 ```
 

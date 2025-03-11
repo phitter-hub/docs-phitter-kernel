@@ -1,3 +1,7 @@
+html {
+    font-size: 62.5%;
+}
+
 :root {
     --vp-c-brand-1: var(--vp-c-green-1);
     --vp-c-brand-2: var(--vp-c-green-2);
@@ -6,7 +10,18 @@
 
     --vp-font-family-base: "Public Sans", "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --vp-font-family-mono: "Cascadia Code", "Fira Code", ui-monospace, "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+
+    --galton-border-color: rgb(143, 143, 143);
+    --galton-nails-color: rgb(88, 88, 88);
+    --galton-walls-color: rgb(143, 143, 143);
+    --galton-ball-color1: oklch(0.577 0.245 27.325);
+    --galton-ball-color2: oklch(0.508 0.118 165.612);
+    --galton-ball-color3: oklch(0.398 0.195 277.366);
+    --galton-ball-color4: oklch(0.546 0.245 262.881);
+    --galton-ball-color5: oklch(0.666 0.179 58.318);
+    --galton-ball-color6: oklch(0.596 0.145 163.225);
 }
+
 
 .dark {
     --vp-c-bg: rgb(32, 33, 36);
@@ -17,18 +32,25 @@
     --vp-c-border: #3c3f44;
     --vp-c-divider: #2e2e32;
     --vp-c-gutter: #2e2e32;
-    
+
+    --galton-border-color: rgb(48, 49, 52);
+    --galton-nails-color: rgb(87, 87, 87);
+    --galton-walls-color: rgb(48, 49, 52);
+    --galton-ball-color1: rgb(147, 197, 253);
+    --galton-ball-color2: rgb(253, 186, 116);
+    --galton-ball-color3: rgb(235, 142, 136);
+    --galton-ball-color4: rgb(253, 230, 138);
+    --galton-ball-color5: rgb(117, 182, 185);
+    --galton-ball-color6: rgb(165, 180, 252);
 }
 
-.dark div.title {
+.dark div.has-sidebar div.title {
     background-color: rgb(32, 33, 36) !important;
     border-right: solid var(--vp-c-gutter) 1px;
     /* border-bottom: solid var(--vp-c-gutter) 1px; */
-    
 }
 
 .dark .VPSidebar {
     background-color: rgb(32, 33, 36) !important;
     border-right: solid var(--vp-c-gutter) 1px;
 }
-

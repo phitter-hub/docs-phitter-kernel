@@ -18,7 +18,7 @@ If you want to plot a histogram with your data and with _a certain_ [distributio
 
 If you only want to use the basic code, use it as follows:
 
-```pyther
+```python
 phi.plot_distribution(id_distribution="weibull")
 ```
 

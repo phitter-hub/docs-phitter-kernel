@@ -2,17 +2,13 @@ import DefaultTheme from "vitepress/theme";
 import "./custom.css";
 import "./publicSans.css";
 
-import MiComponente from "../components/MiComponente.vue";
-import OtroComponente from "../components/OtroComponente.vue";
-import DarkPhitterLogo from "../components/Icons/DarkPhitterLogo.vue";
-import LightPhitterLogo from "../components/Icons/LightPhitterLogo.vue";
+import Home from "./components/Home.vue";
 
 const components = {
-    MiComponente,
-    OtroComponente,
-    DarkPhitterLogo,
-    LightPhitterLogo,
-    Animation,
+    Home,
+    // GaltonBoard,
+    // DarkPhitterLogo,
+    // LightPhitterLogo,
 };
 
 export default {
