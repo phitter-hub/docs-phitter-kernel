@@ -22,7 +22,7 @@
                 <p>This web contains the documentation of the <a href="https://github.com/phitterio/phitter-kernel" target="_blank">Phitter Python Library</a></p>
 
                 <div class="a-buttons-section">
-                    <a class="a-button" href="/documentation">Documentation</a>
+                    <a class="a-button" href="/documentation/intro/philosophy">Documentation</a>
                     <a class="a-button ab2" href="https://phitter.io/">Phitter web</a>
                 </div>
             </div>

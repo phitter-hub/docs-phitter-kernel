@@ -12,8 +12,8 @@ export default defineConfig({
         nav: [
             // { text: "Home", link: "/" },
             { text: "Documentation", link: "/documentation/intro/philosophy" },
-            { text: "Release notes", link: "/release/release-main" },
-            { text: "Phitter web", link: "https://phitter.io/" },
+            { text: "Releases", link: "/release/release-main" },
+            { text: "Phitter Web", link: "https://phitter.io/" },
         ],
         sidebar: {
             "/documentation/": [

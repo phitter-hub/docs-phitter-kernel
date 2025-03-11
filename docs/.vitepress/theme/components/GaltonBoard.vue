@@ -22,9 +22,9 @@ export default defineComponent({
             canvasConfig: {
                 width: 400,
                 height: 700,
-                backgroundColor: getComputedStyle(document.body).getPropertyValue("--background-color-1").trim(),
+                backgroundColor: this.getCssVariable("--background-color-1"),
                 borderWidth: 15,
-                borderColor: getComputedStyle(document.body).getPropertyValue("--galton-border-color").trim(),
+                borderColor: this.getCssVariable("--galton-border-color"),
             },
             // Ramp Configuration
             rampConfig: {
@@ -35,7 +35,7 @@ export default defineComponent({
             },
             // Nails Configuration
             nailsConfig: {
-                color: getComputedStyle(document.body).getPropertyValue("--galton-nails-color").trim(),
+                color: this.getCssVariable("--galton-nails-color"),
                 yMarginInit: 45,
                 yMargin: 2.2,
                 radius: 6,
@@ -61,19 +61,19 @@ export default defineComponent({
             // Walls Configuration
             wallsConfig: {
                 width: 8,
-                color: getComputedStyle(document.body).getPropertyValue("--galton-walls-color").trim(),
+                color: this.getCssVariable("--galton-walls-color"),
             },
             // Balls Configuration
             ballsConfig: {
                 number: 1200,
                 radius: 3,
                 colors: [
-                    getComputedStyle(document.body).getPropertyValue("--galton-ball-color1").trim(),
-                    getComputedStyle(document.body).getPropertyValue("--galton-ball-color2").trim(),
-                    getComputedStyle(document.body).getPropertyValue("--galton-ball-color3").trim(),
-                    getComputedStyle(document.body).getPropertyValue("--galton-ball-color4").trim(),
-                    getComputedStyle(document.body).getPropertyValue("--galton-ball-color5").trim(),
-                    getComputedStyle(document.body).getPropertyValue("--galton-ball-color1").trim(),
+                    this.getCssVariable("--galton-ball-color1"),
+                    this.getCssVariable("--galton-ball-color2"),
+                    this.getCssVariable("--galton-ball-color3"),
+                    this.getCssVariable("--galton-ball-color4"),
+                    this.getCssVariable("--galton-ball-color5"),
+                    this.getCssVariable("--galton-ball-color1"),
                 ],
                 friction: 0.00001,
                 restitution: 0.7,
@@ -347,6 +347,12 @@ export default defineComponent({
                     }
                 }
             }, this.ballsConfig.spawnInterval);
+        },
+        getCssVariable(variableName: string) {
+            if (typeof window === "undefined") {
+                return "";
+            }
+            return window.getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
         },
     },
     mounted() {

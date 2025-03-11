@@ -19,4 +19,4 @@ If you only want to use the basic code, use it as follows:
 phi.plot_histogram()
 ```
 
-![Plot Histogram](/static/fit/plot_histogram.png)
+![Plot Histogram](https://github.com/phitterio/phitter-kernel/blob/main/multimedia/histogram.png?raw=true)

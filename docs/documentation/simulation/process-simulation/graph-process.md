@@ -13,7 +13,7 @@ To create graph your process before simulate, you only need to use the `.process
 simulation.process_graph()
 ```
 
-After you run that line of code you will see the following graph (according to the example mentioned in [Create Process Simulation](/simulation/process-simulation/create-process.md#complete-process-example))
+After you run that line of code you will see the following graph (according to the example mentioned in [Create Process Simulation](/documentation/simulation/process-simulation/create-process.md#complete-process-example))
 
 ![Graph Image](/static/simulation/process-simulation.png)
 

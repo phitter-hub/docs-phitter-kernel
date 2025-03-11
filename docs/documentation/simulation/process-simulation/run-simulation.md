@@ -8,7 +8,7 @@ To run the process simulation that you have created, you need to use the method 
 
 - `number_of_simulations (int, optional)`: Number of simulations of the process that you want to do. Defaults to 1.
 
-Let's continue the process created on [Create Process Simulation](/simulation/process-simulation/create-process.md#complete-process-example)
+Let's continue the process created on [Create Process Simulation](/documentation/simulation/process-simulation/create-process.md#complete-process-example)
 
 ```python
 # Graph your process

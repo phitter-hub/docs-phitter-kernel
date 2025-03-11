@@ -1,4 +1,4 @@
-# Graph Empirical Cumulative Distribution Function (ECDF) of your Data vs. a specific distribution
+# Plot ECDF vs Specific Distribution
 
 **ECDF (Empirical Cumulative Distribution Function)** is a statistical function that estimates the cumulative distribution of a dataset. It shows the proportion of data points that are less than or equal to a given value.
 

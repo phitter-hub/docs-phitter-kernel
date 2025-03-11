@@ -14,12 +14,12 @@ html {
     --galton-border-color: rgb(143, 143, 143);
     --galton-nails-color: rgb(88, 88, 88);
     --galton-walls-color: rgb(143, 143, 143);
-    --galton-ball-color1: oklch(0.577 0.245 27.325);
-    --galton-ball-color2: oklch(0.508 0.118 165.612);
-    --galton-ball-color3: oklch(0.398 0.195 277.366);
-    --galton-ball-color4: oklch(0.546 0.245 262.881);
-    --galton-ball-color5: oklch(0.666 0.179 58.318);
-    --galton-ball-color6: oklch(0.596 0.145 163.225);
+    --galton-ball-color1: rgb(252, 211, 77);
+    --galton-ball-color2: rgb(59, 130, 246);
+    --galton-ball-color3: rgb(113, 63, 18);
+    --galton-ball-color4: rgb(220, 38, 38);
+    --galton-ball-color5: rgb(34, 197, 94);
+    --galton-ball-color6: rgb(79, 70, 229);
 }
 
 
