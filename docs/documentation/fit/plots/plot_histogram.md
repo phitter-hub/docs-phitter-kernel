@@ -1,6 +1,6 @@
-# Plot Data Histogram
+# Histogram
 
-If you want to plot a histogram use the method `.plot_histogram()` that has the following parameters:
+To plot a histogram use the method `.plot_histogram()` that has the following parameters:
 
 - `plot_title` (_str_): Title of the plot. Default is `"HISTOGRAM"`.
 - `plot_xaxis_title` (_str | None_): Title of the X-axis. If `None`, no title is displayed.
@@ -19,4 +19,4 @@ If you only want to use the basic code, use it as follows:
 phi.plot_histogram()
 ```
 
-![Plot Histogram](https://github.com/phitterio/phitter-kernel/blob/main/multimedia/histogram.png?raw=true)
+![Plot Histogram](/fit/plot_histogram.png)

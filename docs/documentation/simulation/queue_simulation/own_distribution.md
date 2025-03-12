@@ -4,7 +4,7 @@ outline: deep
 
 # Create your Own Distribution
 
-If you want to simulate the generation of custom labels along with their probability of appearing, you can use the `OwnDistribution()` class. The parameters of that method are showed below
+To simulate the generation of custom labels along with their probability of appearing, you can use the `OwnDistribution()` class. The parameters of that method are showed below
 
 - `parameters (dict)`: Here you will need to add the different labels (keys) and its probability to happen (value)
 

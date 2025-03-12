@@ -18,7 +18,7 @@ $$
 
 Each step in the ECDF plot corresponds to an observed data point.
 
-If you want to plot the ECDF of your data against a specific ECDF of other [distributions](/documentation/distributions/distributions.md), use the method `phi.plot_ecdf_distribution()` that has the following parameters:
+To plot the ECDF of your data against a specific ECDF of other [distributions](/documentation/distributions/distributions.md), use the method `phi.plot_ecdf_distribution()` that has the following parameters:
 
 #### **Descriptive Settings**
 
@@ -56,4 +56,4 @@ If you only want to use the basic code, use it as follows:
 phi.plot_ecdf_distribution(id_distribution="weibull")
 ```
 
-![ECDF Distribution](/static/fit/ecdf-distribution.png)
+![ECDF Distribution](/fit/plot_ecdf_distribution.png)

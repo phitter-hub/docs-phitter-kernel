@@ -1,6 +1,6 @@
 # Confidence Interval for Simulation Metrics and Probabilities
 
-If you want to have a Confidence Interval for your **Metrics and Probabilities**, you should use the method `.confidence_interval_metrics` that has the following parameters:
+To have a Confidence Interval for your **Metrics and Probabilities**, you should use the method `.confidence_interval_metrics` that has the following parameters:
 
 - `simulation_time (int, optional)`: Simulation time. Defaults to float("Inf)
 - `confidence_level (int, optional)`: Confidence level for the confidence interval for all the metrics and probabilities. Defaults to 0.95.
@@ -8,7 +8,7 @@ If you want to have a Confidence Interval for your **Metrics and Probabilities**
 
 This method will return two things: `probabilities` and `metrics` with confidence interval.
 
-If you want to use this method you should do the following:
+To use this method you should do the following:
 
 ```python
 # Calculate confidence interval for metrics and probabilities

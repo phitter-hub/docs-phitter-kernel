@@ -1,8 +1,8 @@
 # Quantile-Quantile (QQ) Plot with Regression Line
 
-A similar explanation is provided in [Quantile-Quantile (QQ) Plot](/documentation/fit/graphs/plot-qq.md), with the addition of a **regression line** to further assess normality through quantile comparisons.
+A similar explanation is provided in [Quantile-Quantile (QQ) Plot](/documentation/fit/plots/plot_qq.md), with the addition of a **regression line** to further assess normality through quantile comparisons.
 
-If you want to plot QQ with your data and with a regression line, use the method `.qq_plot_regression()` that has the following parameters:
+To plot QQ with your data and with a regression line, use the method `.qq_plot_regression()` that has the following parameters:
 
 - **`id_distribution`** (_str_): Identifier of the [distributions](/documentation/distributions/distributions.md) being analyzed.
 - **`plot_title`** (_str_): Title of the plot. Default is `"QQ PLOT"`.
@@ -37,4 +37,4 @@ phi.qq_plot_regression(id_distribution="weibull")
 
 > 💡 Remember to change `weibull` with the distribution that you need
 
-![PLot a Distribution](/static/fit/qq-plot-regression-line.png)
+![PLot a Distribution](/fit/plot_qq_regression.png)

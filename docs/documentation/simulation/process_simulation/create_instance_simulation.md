@@ -1,6 +1,6 @@
 # Create an Instance Simulation
 
-If you want to create a process simulation, first of all you will need to initialize the object simulation.
+To create a process simulation, first of all you will need to initialize the object simulation.
 
 In order to do that, you have to do the following:
 

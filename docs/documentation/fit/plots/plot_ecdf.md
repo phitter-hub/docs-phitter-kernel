@@ -18,7 +18,7 @@ $$
 
 Each step in the ECDF plot corresponds to an observed data point.
 
-If you want to plot ECDF with your data, use the method `.plot_ecdf()` that has the following parameters:
+To plot ECDF with your data, use the method `.plot_ecdf()` that has the following parameters:
 
 - `plot_title` (_str_): Title of the plot. Default is `"ECDF"`.
 - `plot_xaxis_title` (_str_): Title of the X-axis. Default is `"Domain"`.
@@ -42,4 +42,4 @@ If you only want to use the basic code, use it as follows:
 phi.plot_ecdf()
 ```
 
-![ECDF](/static/fit/ecdf.png)
+![ECDF](/fit/plot_ecdf.png)

@@ -16,7 +16,7 @@ A **QQ plot (Quantile-Quantile plot)** is a graphical tool used to compare the d
 - Comparing the empirical distribution of a dataset with a theoretical one.
 - Detecting **outliers** or deviations from assumptions in modeling.
 
-If you want to plot QQ with your data, use the method `.qq_plot()` that has the following parameters:
+To plot QQ with your data, use the method `.qq_plot()` that has the following parameters:
 
 - `id_distribution` (_str_): Identifier of the [distributions](/documentation/distributions/distributions.md) being analyzed.
 - `plot_title` (_str_): Title of the plot. Default is `"QQ PLOT"`.
@@ -45,4 +45,4 @@ phi.qq_plot(id_distribution="weibull")
 
 > 💡 Remember to change `weibull` with the distribution that you need
 
-![QQ](/static/fit/qq.png)
+![QQ](/fit/plot_qq.png)

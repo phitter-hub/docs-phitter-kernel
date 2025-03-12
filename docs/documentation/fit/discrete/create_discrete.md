@@ -1,6 +1,6 @@
 # Create Discrete Fit
 
-If you want to create a discrete fit you will need to use the class `.Phitter` that has the following parameters:
+To create a discrete fit you will need to use the class `.Phitter` that has the following parameters:
 
 - `data (list[int | float] or numpy.ndarray)`: The dataset to fit the distributions to.
 - `fit_type (str, optional)`: The type of fit, either "continuous" or "discrete" (default is "continuous").
@@ -12,7 +12,7 @@ If you want to create a discrete fit you will need to use the class `.Phitter` t
 - `distributions_to_fit (list[str] or str, optional)`: The list of [distributions](/documentation/distributions/distributions.html#discrete-distributions) to fit or "all" to fit all available distributions (default is "all").
 - `exclude_distributions (list[str] or str, optional)`: The list of [distributions](/documentation/distributions/distributions.html#discrete-distributions) to exclude or "any" to exclude none (default is "any").
 
-If you want to do a basic fit, you should only use `data`
+To do a basic fit, you should only use `data`
 
 ```python
 import phitter
@@ -27,7 +27,7 @@ phi = phitter.Phitter(
 )
 ```
 
-If you want to use more parameters do it as follows
+To use more parameters do it as follows
 
 ```python
 import phitter

@@ -24,7 +24,7 @@ In order to create a `Queue Simulation` you will need to use the class `.Queuein
 
 ## FIFO and LIFO Instances
 
-If you want to create an object you should follow the following steps:
+To create an object you should follow the following steps:
 
 ### Example _without_ Optional Parameters
 

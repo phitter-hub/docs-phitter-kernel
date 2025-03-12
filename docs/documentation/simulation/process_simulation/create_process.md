@@ -32,7 +32,7 @@ You can select **_new_brach_** or **_previous_ids_** depending on the context.
 
 ### _Process without preceding process_
 
-If you want to create a process that **does not** have preceding process you have to do the following:
+To create a process that **does not** have preceding process you have to do the following:
 
 ```python
 simulation_example.add_process(
@@ -60,7 +60,7 @@ simulation_example.add_process(
 
 ### _Process with preceding process_
 
-If you want to create a process that **does** have **preceding** process, you have to do the following:
+To create a process that **does** have **preceding** process, you have to do the following:
 
 ```python
 simulation_example.add_process(

@@ -23,7 +23,7 @@
 
                 <div class="a-buttons-section">
                     <a class="a-button" href="/documentation/intro/philosophy">Documentation</a>
-                    <a class="a-button ab2" href="https://phitter.io/">Phitter web</a>
+                    <a class="a-button ab2" href="https://phitter.io/" target="_blank">Phitter web</a>
                 </div>
             </div>
         </section>

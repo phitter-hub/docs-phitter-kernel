@@ -1,8 +1,8 @@
 # Quick Example
 
-If you want to use a [distribution](/documentation/distributions/distributions) you can do the following:
+To use a [distribution](/documentation/distributions/distributions) you can do the following:
 
-> For this example we will use [Normal](/documentation/distributions/continuous/folded_normal) distribution
+> For this example we will use [Normal](/documentation/distributions/continuous/normal) distribution
 
 ## Create a Distribution
 

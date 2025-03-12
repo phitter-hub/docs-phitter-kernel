@@ -4,7 +4,7 @@ outline: deep
 
 # Confidence Interval for your Metrics and Simulation
 
-If you want to have a confidence interval for the Metrics that you need to calculate, you should use the `.run_confidence_interval` method.
+To have a confidence interval for the Metrics that you need to calculate, you should use the `.run_confidence_interval` method.
 
 - `confidence_level (float, optional)`: Confidence required of the interval. Defaults to 0.95 (95%).
 - `number_of_simulations (int, optional)`: Number of simulations that are going to be run in each replication. Defaults to 1.

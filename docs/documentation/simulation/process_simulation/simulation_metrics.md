@@ -4,7 +4,7 @@ outline: deep
 
 # Simulation Metrics
 
-If you want to identify>
+To identify>
 
 - Average Simulation Time per process
 - Average Simulation Total Time
