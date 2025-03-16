@@ -85,6 +85,27 @@ $$ \mathrm{Mode}(X)=\text{Loc}+a\left(\frac{d-1}{p}\right)^{\frac{1}{p}} \quad \
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/generalized_gamma_4p)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/generalized_gamma_4p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1TN72MSkZ2bRyoNy29h4VIxFudXAroSi1PnmFijPvO0M)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "generalized_gamma_4p";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

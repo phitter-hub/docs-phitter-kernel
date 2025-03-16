@@ -78,6 +78,26 @@ $$ \mathrm{Mode}(X)=\left\{\begin{array}{cl} 0 & \text{if } \ p < 1/2 \\ 0, 1 & 
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/discrete/bernoulli)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/discrete/bernoulli.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1sWJZYZWW8cVLFXYV-fb3Lq4y2YgWzgTGWHfhIJ0zM5c)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "bernoulli";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/discrete/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
     

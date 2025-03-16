@@ -83,6 +83,27 @@ $$ \mathrm{Mode}(X)=a\left(\frac{d-1}{p}\right)^{\frac{1}{p}} \quad \text{if } d
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/generalized_gamma)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/generalized_gamma.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1xx8b_VSG4jznZzaKq2yKumw5VcNX5Wj86YqLO7n4S5A)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "generalized_gamma";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

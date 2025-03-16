@@ -2,17 +2,17 @@
 outline: deep
 ---
 
-# Run Queue Simulation
+# Running a Queue Simulation
 
-In order to run a Queue Simulation you need to use the method `.run` in your object. The parameters are shown below:
+To execute a queue simulation, use the `.run` method on the `QueueingSimulation` instance. The method accepts the following parameter:
 
-- `simulation_time`: Duration of the simulation that you want to have
+-   **`simulation_time`**: The total duration over which the simulation will run.
 
-## How to run
-
-No matter the **Queue Discipline** that you have selected you have to run the simulation in the following way
+The procedure for running the simulation is consistent across all queue disciplines (FIFO, LIFO, or PBS). Below is an example of how to run a basic simulation:
 
 ```python
-# Run simulation
-simulation_basic.run(simulation_time = 2000)
+# Execute the simulation
+simulation_basic.run(simulation_time=2000)
 ```
+
+In this example, the simulation is performed for 2,000 time units. If no value is provided, the default duration is `float("inf")`.

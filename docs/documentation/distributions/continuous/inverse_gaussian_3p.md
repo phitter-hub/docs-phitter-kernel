@@ -84,6 +84,27 @@ $$ \mathrm{Mode}(X)=\text{Loc}+\mu\left[\left(1+\frac{9 \mu^2}{4 \lambda^2}\righ
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/inverse_gaussian_3p)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/inverse_gaussian_3p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1wkcSlXnUdMe4by2N9nPA_Cdsz3D0kHL7MVchsjl_CTQ)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "inverse_gaussian_3p";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

@@ -80,6 +80,27 @@ $$ \mathrm{Mode}(X)=\exp(\mu-\sigma^2) $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/lognormal)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/lognormal.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1lS1cR4C2R45ug0ZyLxBlRBtcXH6hNPE1L-5wP68gUpA)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "lognormal";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

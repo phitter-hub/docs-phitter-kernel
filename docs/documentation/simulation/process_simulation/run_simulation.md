@@ -2,17 +2,16 @@
 outline: deep
 ---
 
-# Run a Process Simulation
+# Running a Process Simulation
 
-To run the process simulation that you have created, you need to use the method `.run` which has the following arguments:
+The `run` method executes the simulation for a specified number of iterations. Its primary argument is:
 
-- `number_of_simulations (int, optional)`: Number of simulations of the process that you want to do. Defaults to 1.
+-   **`number_of_simulations (int, optional)`**: Specifies how many times the simulation should be repeated. Defaults to `1`.
 
-Let's continue the process created on [Create Process Simulation](/documentation/simulation/process_simulation/create_process.md#complete-process-example)
+For instance, continuing the process configuration described in the [Complete Process Example](#complete-process-example), the simulation can be run as follows:
 
 ```python
-# Graph your process
 simulation.run(number_of_simulations=100)
 ```
 
-You will be able to see the results calling the object simulation that you have created
+After calling `run`, the resulting data can be viewed by referencing the `simulation` object directly.

@@ -2,18 +2,18 @@
 outline: deep
 ---
 
-# Queue Simulation Metrics
+# Number of Elements Probability Summary
 
-After you run your simulation, you can see the different probabilities for the number of elements using the method `.number_probability_summary` that does not have any parameters. The probabilities that you will see are the likelihood that one of the following things happen:
+After the simulation has been executed, the likelihood of observing a specific number of elements in the system, as well as those less than or equal to or greater than or equal to that number, can be accessed with the `.number_probability_summary` method. This method does not require any parameters and provides three types of probabilities:
 
-- Less or equals to the number of elements
-- Exact number of elements
-- Greater or equals to the number of elements
+-   **Less than or equal to a given number of elements**
+-   **Exactly equal to that number of elements**
+-   **Greater than or equal to that number of elements**
 
-To calculate this use the following logic:
+Below is an example of how to invoke this method:
 
 ```python
 simulation_basic.number_probability_summary()
 ```
 
-No matter the **Queue Discipline** that you have selected you have to run the simulation in that way
+This procedure is applicable for any queue discipline (FIFO, LIFO, or PBS).

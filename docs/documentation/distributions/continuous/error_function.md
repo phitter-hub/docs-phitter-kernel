@@ -80,6 +80,27 @@ $$ \mathrm{Mode}(X)=0 $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/error_function)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/error_function.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1QT1vSgTWVgDmNz4FrH3fhwRGpgvPohgqZSCADHfBXkM)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "error_function";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

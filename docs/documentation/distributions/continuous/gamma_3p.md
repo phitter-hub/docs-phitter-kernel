@@ -85,6 +85,27 @@ $$ \mathrm{Mode}(X)=\text{Loc}+\beta \text{P}^{-1}\left(\alpha,\frac{1}{2}\right
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/gamma_3p)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/gamma_3p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1NkyFZFOMzk2V9qkFEI_zhGUGWiGV-K9vU-RLaFB7ip8)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "gamma_3p";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

@@ -22,21 +22,20 @@ export default defineConfig({
                     // collapsed: false,
                     items: [
                         { text: "Phitter Philosophy", link: "/documentation/intro/philosophy" },
-                        { text: "Python Version", link: "/documentation/intro/python_version" },
                         { text: "Installation", link: "/documentation/intro/installation" },
+                        { text: "Examples", link: "/documentation/intro/examples" },
                     ],
                 },
                 {
                     text: "Fit",
-                    // collapsed: true,
                     items: [
                         { text: "Quick Fit", link: "/documentation/fit/quick_fit" },
+                        { text: "Workers", link: "/documentation/fit/workers" },
                         {
                             text: "Continuous",
                             collapsed: true,
                             items: [
-                                { text: "Create Continuous Fit Object", link: "documentation/fit/continuous/create_continuous" },
-                                { text: "Run Continuous Fit", link: "documentation/fit/continuous/run_fit" },
+                                { text: "Continuous Implementation", link: "documentation/fit/continuous/continuous_fit_implementation" },
                                 { text: "Continuous Fit Results", link: "documentation/fit/continuous/continuous_results" },
                             ],
                         },
@@ -44,8 +43,7 @@ export default defineConfig({
                             text: "Discrete",
                             collapsed: true,
                             items: [
-                                { text: "Create Discrete Fit Object", link: "documentation/fit/discrete/create_discrete" },
-                                { text: "Run Discrete Fit", link: "documentation/fit/discrete/run_discrete_fit" },
+                                { text: "Discrete Implementation", link: "documentation/fit/discrete/discrete_fit_implementation" },
                                 { text: "Discrete Fit Results", link: "documentation/fit/discrete/discrete_results" },
                             ],
                         },
@@ -54,20 +52,19 @@ export default defineConfig({
                             text: "Plots",
                             collapsed: true,
                             items: [
-                                { text: "Plot Data Histogram", link: "documentation/fit/plots/plot_histogram" },
-                                { text: "Plot a Certain Distribution", link: "documentation/fit/plots/plot_distribution" },
-                                { text: "Plot Several Distributions", link: "documentation/fit/plots/plot_several_distributions" },
-                                { text: "Plot ECDF of your Data", link: "documentation/fit/plots/plot_ecdf" },
-                                { text: "Plot ECDF of your Data vs. Distribution", link: "documentation/fit/plots/plot_ecdf_distribution" },
-                                { text: "Plot Quantile_Quantile (QQ)", link: "documentation/fit/plots/plot_qq" },
-                                { text: "Plot Quantile_Quantile (QQ) with a Regression Line", link: "documentation/fit/plots/plot_qq_regression" },
+                                { text: "Histogram", link: "documentation/fit/plots/plot_histogram" },
+                                { text: "PDF Distribution", link: "documentation/fit/plots/plot_distribution" },
+                                { text: "N Distributions", link: "documentation/fit/plots/plot_n_distributions" },
+                                { text: "ECDF", link: "documentation/fit/plots/plot_ecdf" },
+                                { text: "ECDF vs Distribution", link: "documentation/fit/plots/plot_ecdf_distribution" },
+                                { text: "Quantile Quantile", link: "documentation/fit/plots/plot_qq" },
+                                { text: "QQ vs Regression", link: "documentation/fit/plots/plot_qq_regression" },
                             ],
                         },
                     ],
                 },
                 {
                     text: "Simulation",
-                    // collapsed: true,
                     items: [
                         {
                             text: "Queue Simulation",
@@ -97,10 +94,10 @@ export default defineConfig({
                 },
                 {
                     text: "Distributions",
-                    link: "/documentation/distributions/distributions",
-                    // collapsed: true,
                     items: [
-                        { text: "Quick Example", collapsed: true, link: "/documentation/distributions/quick_example" },
+                        { text: "Quick Example", link: "/documentation/distributions/quick_example" },
+                        { text: "Continuous Distributions", link: "/documentation/distributions/continuous_distributions" },
+                        { text: "Discrete Distributions", link: "/documentation/distributions/discrete_distributions" },
                         {
                             text: "Continuous",
                             collapsed: true,
@@ -192,6 +189,27 @@ export default defineConfig({
                                 { text: "Negative Binomial", collapsed: true, link: "/documentation/distributions/discrete/negative_binomial" },
                                 { text: "Poisson", collapsed: true, link: "/documentation/distributions/discrete/poisson" },
                                 { text: "Uniform", collapsed: true, link: "/documentation/distributions/discrete/uniform" },
+                            ],
+                        },
+                    ],
+                },
+                {
+                    text: "Benchmarks",
+                    items: [
+                        {
+                            text: "Continuous",
+                            collapsed: true,
+                            items: [
+                                { text: "Continuous fit time", link: "documentation/benchmarks/continuous/continuous_fit_time.md" },
+                                { text: "Execute Continuous Fit", link: "documentation/benchmarks/continuous/continuous_parameters_estimation.md" },
+                            ],
+                        },
+                        {
+                            text: "Discrete",
+                            collapsed: true,
+                            items: [
+                                { text: "Discrete Fit Implementation", link: "documentation/benchmarks/discrete/discrete_fit_time.md" },
+                                { text: "Execute Discrete Fit", link: "documentation/benchmarks/discrete/discrete_parameters_estimation.md" },
                             ],
                         },
                     ],

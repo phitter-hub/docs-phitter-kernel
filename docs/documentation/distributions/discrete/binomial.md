@@ -83,6 +83,26 @@ $$ \mathrm{Mode}(X)=\lfloor (n + 1)p \rfloor \vee \lceil (n + 1)p \rceil - 1 $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/discrete/binomial)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/discrete/binomial.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1bPOiZVUhjLMmbFqVjWMqg1NzTvsZxVIw95fi5hIhkn0)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "binomial";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/discrete/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
     

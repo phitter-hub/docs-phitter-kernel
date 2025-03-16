@@ -79,6 +79,27 @@ $$ \mathrm{Mode}(X)=A\left(\frac{B-1}{BC+1}\right)^{\frac{1}{B}} $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/burr)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/burr.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1vhY3l3VAgBj9BQT1yE3meRTmEZP3HXjjm30nxDKCwCI)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "burr";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

@@ -2,24 +2,28 @@
 outline: deep
 ---
 
-# Graph your Process Simulation
+# Graphing the Process Simulation
 
-In order to review if you have added your process in the correct path, you would like to graph your process.
-
-To create graph your process before simulate, you only need to use the `.process_graph` method:
+Visualizing the simulation flow can confirm whether processes have been configured correctly. The `process_graph` method provides a graphical representation of all defined processes and their interconnections.
 
 ```python
-# Graph your process
+# Generate a visualization of the process layout
 simulation.process_graph()
 ```
 
-After you run that line of code you will see the following graph (according to the example mentioned in [Create Process Simulation](/documentation/simulation/process_simulation/create_process.md#complete-process-example))
+The example below corresponds to the configuration described in the [Complete Process Example](#complete-process-example). When executed, it produces an output similar to:
 
 ![Graph Image](/simulation/process_simulation.png)
 
-## simulate.process_graph()
+## `simulate.process_graph()`
 
-To use additional features that `.process_graph` has you should see its arguments
+Additional features are available through the following arguments:
 
-- `graph_direction (str, optional)`: You can show the graph in two ways: 'LR' left to right OR 'TB' top to bottom. Defaults to 'LR'.
-- `save_graph_pdf (bool, optional)`: You can save the process graph in a PDF file. Defaults to False.
+-   **`graph_direction (str, optional)`**: Determines the graph’s orientation. Possible values are `'LR'` (left-to-right) or `'TB'` (top-to-bottom). Defaults to `'LR'`.
+-   **`save_graph_pdf (bool, optional)`**: Indicates whether the resulting graph should be saved as a PDF file. Defaults to `False`.
+
+For instance, to generate a top-to-bottom graph and export it as a PDF, include:
+
+```python
+simulation.process_graph(graph_direction="TB", save_graph_pdf=True)
+```

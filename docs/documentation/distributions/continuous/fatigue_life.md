@@ -83,6 +83,27 @@ $$ \mathrm{Mode}(X)=\arg\max_{x}f_{X}\left(x\right) $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/fatigue_life)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/fatigue_life.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1j-U_YMX89VHe2jVq3pazpzqYeA1j1zopW22C9yJcPS0)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "fatigue_life";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

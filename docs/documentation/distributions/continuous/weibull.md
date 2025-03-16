@@ -80,6 +80,27 @@ $$ \mathrm{Mode}(X)=\left\{\begin{array}{cl} \beta\left(\frac{\alpha-1}{\alpha}\
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/weibull)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/weibull.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1DdNwWHmu0PZAhMYf475EMU3scTMXok3wOhzsg7gn8Ek)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "weibull";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

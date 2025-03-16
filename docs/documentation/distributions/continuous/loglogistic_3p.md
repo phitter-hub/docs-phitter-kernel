@@ -82,6 +82,27 @@ $$ \mathrm{Mode}(X)=\text{Loc}+\alpha\left(\frac{\beta-1}{\beta+1}\right)^{1/\be
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/loglogistic_3p)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/loglogistic_3p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1RaLZ5L0rTrv9_fAi6izElf02ucuFy9LwagL_gQn3R0Y)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "loglogistic_3p";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

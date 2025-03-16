@@ -85,6 +85,27 @@ $$ \mathrm{Mode}(X)=\text{Loc} $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/t_student_3p)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/t_student_3p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1K8bpbc-0mwe0mvRYXUQmoE8vaTigciJWDS4CPXmJodU)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "t_student_3p";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

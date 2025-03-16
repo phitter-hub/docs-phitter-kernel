@@ -1,21 +1,34 @@
-# Speed up for large datasets
+# Speeding Up the Fitting Process for Large Datasets
 
-To speed up the fit for large amount of data, **Phitter** provides two strategies:
+When dealing with extensive datasets, Phitter provides two primary strategies to accelerate the fitting procedure:
 
-- **_Strategy 1_**: Specify a sample size smaller than the original dataset. A sample size of less than 100K is suggested. Phitter will randomly select a subsample of the specified size. To use this strategy you should use the parameter `subsample_size` explain in [Create Continuous Fit](/documentation/fit/continuous/create_continuous.md) or [Create Discrete Fit](/documentation/fit/discrete/create_discrete.md)
+-   **Strategy 1**: Specify a subsample size smaller than the original dataset by using the `subsample_size` parameter. A subsample size under 100,000 is recommended. Phitter will randomly select observations up to the specified limit. Detailed usage information is located in the sections [Create Continuous Fit](/documentation/fit/continuous/continuous_fit_implementation) and [Create Discrete Fit](/documentation/fit/discrete/discrete_fit_implementation).
 
-- **_Strategy 2_**: Specify an estimation sample size smaller than the original dataset. A sample size of less than 10K is suggested. Phitter will randomly select a subsample of the specified size for parameter estimation. To use this strategy you should use the parameter `subsample_estimation_size` explain in [Create Continuous Fit](/documentation/fit/continuous/create_continuous.md) or [Create Discrete Fit](/documentation/fit/discrete/create_discrete.md)
+-   **Strategy 2**: Specify a smaller subsample for parameter estimation by using the `subsample_estimation_size` parameter. A subsample size under 10,000 is suggested. In this approach, Phitter will draw a random subsample to estimate distribution parameters. Additional instructions appear in the sections [Create Continuous Fit](/documentation/fit/continuous/continuous_fit_implementation) and [Create Discrete Fit](/documentation/fit/discrete/discrete_fit_implementation).
 
-::: info
-You can use either one of the above strategies or both.
-:::
-
-To use it, create the object with those parameters:
+Either of these strategies—or both in combination—may be implemented to achieve improved performance. For instance:
 
 ```python
-phi = phitter.PHITTER(
+import phitter
+
+# Defining a dataset
+data: list[int | float] = [...]
+
+# Applying both subsample strategies
+phi = phitter.Phitter(
     data=data,
     subsample_size=10000,
     subsample_estimation_size=10000,
 )
+phi.fit(n_workers=4)
 ```
+
+By specifying these parameters, it is possible to reduce computational overhead significantly, particularly when the original dataset is very large.
+
+## Example
+
+This tutorial shows how to fit a million data points in less than 20 seconds on a Google Colab standard instance.
+
+|             Tutorial             |                                                                                                               Notebooks                                                                                                               |
+| :------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Fit Accelerate [Sample>100K]** | <a target="_blank" href="https://colab.research.google.com/github/phitterio/phitter-kernel/blob/main/examples/fit/fit_accelerate.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |

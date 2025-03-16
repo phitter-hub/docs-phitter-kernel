@@ -81,6 +81,27 @@ $$ \mathrm{Mode}(X)=\text{Loc}+\alpha\sqrt{2} $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/maxwell)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/maxwell.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/15tPw2RM2_a0vJMjVwNgsJnJUKFk9xbcEALqOf1m5qH0)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "maxwell";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

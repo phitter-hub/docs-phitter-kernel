@@ -2,27 +2,28 @@
 outline: deep
 ---
 
+
 # Queue Simulation Metrics
 
-After you run your simulation, you can see the different metrics using the method `.metrics_summary` that does not have any parameters. The metrics that you will find are the following:
+Upon completion of a simulation, various metrics can be retrieved using the `.metrics_summary` method. This method does not accept any parameters. The following metrics are provided:
 
-- Average Time in System
-- Average Time in Queue
-- Average Time in Service
-- Standard Deviation Time in System
-- Standard Deviation Time in Queue
-- Standard Deviation Time in Service
-- Average Elements in System
-- Average Elements in Queue
-- Probability to join the System
-- Probability to Finish after Time
-- Probability to Wait in Line
-- Utilization of each Server
+- **Average Time in System**  
+- **Average Time in Queue**  
+- **Average Time in Service**  
+- **Standard Deviation of Time in System**  
+- **Standard Deviation of Time in Queue**  
+- **Standard Deviation of Time in Service**  
+- **Average Number of Elements in the System**  
+- **Average Number of Elements in the Queue**  
+- **Probability of Joining the System**  
+- **Probability of Finishing After a Specified Time**  
+- **Probability of Waiting in the Queue**  
+- **Utilization of Each Server**
 
-To calculate this use the following logic:
+After the simulation is executed, the metrics can be viewed by calling:
 
 ```python
-simulation_basic.number_probability_summary()
+simulation_basic.metrics_summary()
 ```
 
-No matter the **Queue Discipline** that you have selected you have to run the simulation in that way
+The `.metrics_summary` method can be invoked regardless of the queue discipline (FIFO, LIFO, or PBS).

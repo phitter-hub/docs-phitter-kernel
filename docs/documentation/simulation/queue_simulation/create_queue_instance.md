@@ -2,39 +2,37 @@
 outline: deep
 ---
 
-# Create a Queue Simulation
+# Creating a Queue Simulation
 
-In order to create a `Queue Simulation` you will need to use the class `.QueueingSimulation` from simulation. The arguments of that class are shown below:
+A queue simulation can be created with the `.QueueingSimulation` class from the `simulation` module. This class supports several parameters that define how arrivals and services are handled, the number of servers, and various optional features. The mandatory and optional parameters are outlined below.
 
-## _Mandatory Parameters to add_
+## Mandatory Parameters
 
-- `A`: Arrivals distribution.
-- `A Parameters (a_parameters)`: Parameters of the arrival distribution.
-- `S`: Server distribution.
-- `S Parameters (s_parameters)`: Parameters of the server distribution.
-- `C`: Number of Servers.
+-   **`A`**: Distribution used to model arrivals.
+-   **`A Parameters (a_parameters)`**: Parameters of the arrival distribution.
+-   **`S`**: Distribution used to model service times.
+-   **`S Parameters (s_parameters)`**: Parameters of the service distribution.
+-   **`C`**: Number of servers (i.e., service channels).
 
-## _Optional Parameters_
+## Optional Parameters
 
-- `K`: Maximum system capacity. Defaults infinity.
-- `N`: Total population of potential customers. Defaults infinity.
-- `D`: **Queue Discipline**. Defaults `FIFO`. Common disciplines include `First-In-First-Out ("FIFO")`, `Last-In-First-Out ("LIFO")`, `priority-based service ("PBS")`.
-- `PBS Distribution (pbs_distribution)`: Discrete Distribution that will prioritize the different elements. **Only available with `d="PBS"`**
-- `PBS Parameters (pbs_parameters)`: Parameters of the PBS distribution. **Only available with `d="PBS"`**
+-   **`K`**: Maximum system capacity. Defaults to infinity.
+-   **`N`**: Total population of potential customers. Defaults to infinity.
+-   **`D`**: Queue discipline. The default is `FIFO` (First-In-First-Out). Additional disciplines include `Last-In-First-Out (LIFO)` and priority-based service (`PBS`).
+-   **`PBS Distribution (pbs_distribution)`**: Discrete distribution used to prioritize customers. This parameter is only available when `d="PBS"`.
+-   **`PBS Parameters (pbs_parameters)`**: Parameters for the discrete distribution applied to priority-based service. This parameter is only available when `d="PBS"`.
 
 ## FIFO and LIFO Instances
 
-To create an object you should follow the following steps:
+### Example Without Optional Parameters
 
-### Example _without_ Optional Parameters
-
-First we will show an example without Optional Parameters.
+The following example illustrates how to create a queue simulation with only the mandatory parameters:
 
 ```python
 from phitter import simulation
 
-# Create a simulation process instance
-# As we are running FIFO we don't need to specify it in the "d"
+# Create a FIFO simulation instance.
+# Since FIFO is the default discipline, it is not necessary to specify "d".
 simulation_basic = simulation.QueueingSimulation(
     a="exponential",
     a_parameters={"lambda": 5},
@@ -44,17 +42,16 @@ simulation_basic = simulation.QueueingSimulation(
 )
 ```
 
-Although we are using `FIFO` here, remember that the exact same logic applies to `LIFO`.
+The same configuration can be used for an LIFO system by specifying `d="LIFO"` if needed.
 
-### Example _with_ Optional Parameters
+### Example With Optional Parameters
 
-Now that you understand how to create a basic logic. Take a look of a logic with additional parameters.
+Below is an example that includes certain optional parameters:
 
 ```python
 from phitter import simulation
 
-# Create a simulation process instance
-# Here we are using LIFO, that's why we specify the "d" value
+# Create a queue simulation instance using the LIFO discipline.
 simulation_with_optionals = simulation.QueueingSimulation(
     a="exponential",
     a_parameters={"lambda": 5},
@@ -63,25 +60,30 @@ simulation_with_optionals = simulation.QueueingSimulation(
     c=3,
     k=3,
     n=5000,
+    d="LIFO",
 )
 ```
 
-Although we are using `LIFO` here, remember that the exact same logic applies to `FIFO`.
+While this example demonstrates the LIFO discipline, the same logic applies to FIFO by changing or omitting the `d` parameter.
 
-## PBS Instance
+## Priority-Based Service (PBS) Instance
 
-In order to create an object `.QueueingSimulation` with `PBS`, it is needed to add two additional parameters as **mandatories**. Those parameters are: `PBS Distribution (pbs_distribution)` and `PBS Parameters (pbs_parameters)`
+When creating a queue simulation with `PBS`, two additional parameters become mandatory:
 
-### Example _without_ Optional Parameters
+-   **`pbs_distribution`**: A discrete distribution that assigns priority labels.
+-   **`pbs_parameters`**: Parameters for this priority distribution.
+
+### Example Without Optional Parameters
 
 ```python
 from phitter import simulation
 
-# Parameters of the PBS for the "Own Distribution"
-# The most important category in this case is the smallest number
-parameters={0: 0.5, 1: 0.3, 2: 0.2}
-# Create a simulation process instance
-simulation_basic = simulation.QueueingSimulation(
+# Parameters for the "Own Distribution"
+# Lower numeric labels receive higher priority in this distribution.
+parameters = {0: 0.5, 1: 0.3, 2: 0.2}
+
+# Create a queue simulation instance using PBS.
+simulation_basic_pbs = simulation.QueueingSimulation(
     a="exponential",
     a_parameters={"lambda": 5},
     s="exponential",
@@ -93,17 +95,17 @@ simulation_basic = simulation.QueueingSimulation(
 )
 ```
 
-### Example _with_ Optional Parameters
+### Example With Optional Parameters
 
 ```python
 from phitter import simulation
 
-# Parameters of the PBS for the "Own Distribution"
-# The most important category in this case is the smallest number
-parameters={0: 0.5, 1: 0.3, 2: 0.2}
-# Create a simulation process instance
+# Parameters for the "Own Distribution"
+# Lower numeric labels receive higher priority.
+parameters = {0: 0.5, 1: 0.3, 2: 0.2}
 
-simulation_with_optionals = simulation.QueueingSimulation(
+# Create a queue simulation instance with additional optional parameters using PBS.
+simulation_with_optionals_pbs = simulation.QueueingSimulation(
     a="exponential",
     a_parameters={"lambda": 5},
     s="exponential",
@@ -116,3 +118,5 @@ simulation_with_optionals = simulation.QueueingSimulation(
     n=5000,
 )
 ```
+
+This example demonstrates how the `PBS` discipline requires specifying both `pbs_distribution` and `pbs_parameters`. Additional capacity (`k`) and population limits (`n`) are included for illustrative purposes.

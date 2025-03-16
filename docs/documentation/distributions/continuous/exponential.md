@@ -79,6 +79,27 @@ $$ \mathrm{Mode}(X)=0 $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/exponential)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/exponential.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1c8aCgHTq3fEyIkVM1Ph3fzebxQMuourz1UkWbH4h3HA)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "exponential";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

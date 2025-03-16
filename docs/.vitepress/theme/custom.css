@@ -11,10 +11,10 @@ html {
     --vp-font-family-base: "Public Sans", "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --vp-font-family-mono: "Cascadia Code", "Fira Code", ui-monospace, "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
 
-    --galton-border-color: rgb(143, 143, 143);
-    --galton-nails-color: rgb(88, 88, 88);
-    --galton-walls-color: rgb(143, 143, 143);
-    --galton-ball-color1: rgb(252, 211, 77);
+    --galton-border-color: rgb(122, 122, 122);
+    --galton-nails-color: rgb(77, 77, 77);
+    --galton-walls-color: rgb(122, 122, 122);
+    --galton-ball-color1: rgb(255, 203, 31);
     --galton-ball-color2: rgb(59, 130, 246);
     --galton-ball-color3: rgb(113, 63, 18);
     --galton-ball-color4: rgb(220, 38, 38);
@@ -41,7 +41,7 @@ html {
     --galton-ball-color3: rgb(235, 142, 136);
     --galton-ball-color4: rgb(253, 230, 138);
     --galton-ball-color5: rgb(117, 182, 185);
-    --galton-ball-color6: rgb(165, 180, 252);
+    --galton-ball-color6: rgb(203, 213, 225);
 }
 
 .dark div.has-sidebar div.title {

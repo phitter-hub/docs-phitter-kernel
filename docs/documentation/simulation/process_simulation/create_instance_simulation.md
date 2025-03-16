@@ -1,16 +1,12 @@
-# Create an Instance Simulation
+# Creating a Simulation Instance
 
-To create a process simulation, first of all you will need to initialize the object simulation.
-
-In order to do that, you have to do the following:
+In order to initialize a process simulation, it is first necessary to import the `simulation` module from the Phitter library. The following example demonstrates how to instantiate a new process simulation object:
 
 ```python
 from phitter import simulation
 
-# Create a simulation process instance
+# Instantiate a process simulation
 simulation_example = simulation.ProcessSimulation()
 ```
 
-Hurray! 😎
-
-You have created a simulation instance. Now you can review how to create Process Simulation
+Once this code is executed, a `ProcessSimulation` instance called `simulation_example` is created. It can then be configured and used to model various processes.

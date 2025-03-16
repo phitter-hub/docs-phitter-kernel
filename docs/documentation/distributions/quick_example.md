@@ -1,46 +1,54 @@
 # Quick Example
 
-To use a [distribution](/documentation/distributions/distributions) you can do the following:
+To use a [distribution](/documentation/distributions/continuous_distributions), follow the steps below.
 
-> For this example we will use [Normal](/documentation/distributions/continuous/normal) distribution
+> **Example:** This demonstration utilizes the [Normal](/documentation/distributions/continuous/normal) distribution.
 
-## Create a Distribution
+## Creating a Distribution
 
-You just need to add the parameters to the needed function
+A distribution can be instantiated by providing the required parameters to the respective function:
 
 ```python
 distribution = phitter.continuous.Normal({"mu": 5, "sigma": 2})
 ```
 
-> 💡 Remember to change `Normal` with the distribution and parameters that you need
+> 💡 Replace `Normal` with the desired distribution and adjust the parameters accordingly.
 
-## Get different metrics from the distribution
+## Retrieving Distribution Metrics
 
-### Generate Cumulative Distribution
+### Cumulative Distribution Function (CDF)
+
+Computes the probability that a random variable is less than or equal to a specified value:
 
 ```python
 distribution.cdf(3.56446)
 ```
 
-### Probability density function
+### Probability Density Function (PDF)
+
+Evaluates the likelihood of the variable taking a specific value:
 
 ```python
 distribution.pdf(3.56446)
 ```
 
-### Percent point function
+### Percent Point Function (PPF)
+
+Determines the quantile function, which is the inverse of the CDF:
 
 ```python
 distribution.ppf(0.6344)
 ```
 
-### Sample Data
+### Sampling from the Distribution
+
+Generates a sample dataset of the specified size:
 
 ```python
 data = distribution.sample(1000)
 ```
 
-## Get Stats
+## Statistical Properties
 
 ### Mean
 
@@ -77,3 +85,5 @@ distribution.median
 ```python
 distribution.mode
 ```
+
+This example provides a fundamental workflow for utilizing distributions in Phitter. Additional functionalities and customizations can be explored in the full documentation.

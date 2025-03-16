@@ -1,18 +1,16 @@
 # Quick Fit
 
-To fit a dataset in a **fast** way. You should use the following code.
+A preliminary fit of any dataset can be performed using the following example. This approach automatically attempts to fit the dataset to every supported continuous distribution:
 
 ```python
 import phitter
 
-## Define your dataset
+# Define the dataset
 data: list[int | float] = [...]
 
-## Make a continuous fit using Phitter
+# Instantiate the Phitter class and fit
 phi = phitter.Phitter(data=data)
-phi.fit()
+phi.fit(n_workers=4)
 ```
 
-In that way you will **fit** your dataset to any **_continuos distribution_**.
-
-To use additional fit features or understanding your data, please continue this documentation.
+By default, this procedure evaluates all available continuous distributions. Further details and advanced options are provided in subsequent sections of the documentation.

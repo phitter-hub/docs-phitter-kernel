@@ -84,6 +84,27 @@ $$ \mathrm{Mode}(X)=\mu $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/gumbel_right)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/gumbel_right.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1CpzfSwAdptFrI8DhV3tWRsEFd9cr6h3Jaj7t3gigims)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "gumbel_right";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

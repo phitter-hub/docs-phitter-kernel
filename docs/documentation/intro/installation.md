@@ -1,21 +1,27 @@
 # Installation
 
-## Installing from PyPI
+## Installation from PyPI
 
-Phitter can be downloaded via pip from [PyPI](https://pypi.org/project/phitter/) with the following line of code in your terminal
+Phitter is hosted on [PyPI](https://pypi.org/project/phitter/) and may be installed by means of the `pip` package manager. To install the latest available version, execute the following command in a terminal:
+
+### Requirements
+
+```console
+python: >=3.9
+```
+
+### PyPI
 
 ```bash
 pip install phitter
 ```
 
-If you need to download a specific version of phitter, run the following line in your terminal
+To install a specific version, append the desired version number. For instance, to install version 0.7.2:
 
 ```bash
 pip install phitter==0.7.2
 ```
 
-Remember to change `0.7.2` with the version that you need.
+Detailed information concerning each release is provided in the [Release Notes](/release/release_main.md).
 
-Please go to [Release notes](/release/release_main.md) to review the different versions.
-
-> 💡*Phitter team recommends to use the last version as it is the most stable*
+> **Note:** It is strongly recommended to install the latest version of Phitter in order to ensure optimal stability and performance.

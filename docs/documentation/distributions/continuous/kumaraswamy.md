@@ -81,6 +81,27 @@ $$ \mathrm{Mode}(X)=\text{min}+\left(\text{max}-\text{min}\right)\times\left(\fr
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/kumaraswamy)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/kumaraswamy.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/10YJUDlAEygfOn07YxHBJxDqiXxygv8jKpJ8WvCZhe84)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "kumaraswamy";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

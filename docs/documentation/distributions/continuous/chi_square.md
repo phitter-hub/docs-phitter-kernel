@@ -82,6 +82,27 @@ $$ \mathrm{Mode}(X)=\text{max}(\text{df}-2,0) $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/chi_square)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/chi_square.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1VatJuUON_2qghjPEYMdcjGE7TYbYqduzgdYe5YNyVf4)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "chi_square";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

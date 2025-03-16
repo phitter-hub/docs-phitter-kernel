@@ -80,6 +80,27 @@ $$ \mathrm{Mode}(X)=\frac{\sqrt{2}}{2}\left(\frac{(2m-1)\Omega}{m}\right)^{1/2} 
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/nakagami)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/nakagami.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1fY8ID5gz1R6oWFm4w91GFdQMCd0wJ5ZRgfWi-yQtGqs)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "nakagami";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

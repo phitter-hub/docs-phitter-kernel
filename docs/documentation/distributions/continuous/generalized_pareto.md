@@ -81,6 +81,27 @@ $$ \mathrm{Mode}(X)=\mu+\frac{\sigma( 2^{c} -1)}{c} $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/generalized_pareto)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/generalized_pareto.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1E28WYhX4Ba9Nj-JNxqAm-Gh7o1EOOIOwXIdCFl1PXI0)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "generalized_pareto";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

@@ -1,48 +1,139 @@
-# Quantile-Quantile (QQ) Plot
+# Quantile-Quantile Plot
 
-A **QQ plot (Quantile-Quantile plot)** is a graphical tool used to compare the distribution of a dataset against a theoretical distribution (e.g., normal distribution) or between two datasets. It helps assess whether a dataset follows a specified distribution.
+A **Quantile-Quantile (QQ) plot** is a statistical graphical tool used to compare the quantiles of an empirical dataset against the quantiles of a theoretical probability distribution. This visualization helps assess the goodness-of-fit of the assumed distribution.
 
-### **How it Works:**
+## Methodology
 
-1. The quantiles (percentiles) of the observed data are plotted against the corresponding quantiles of the theoretical distribution.
-2. If the data follows the theoretical distribution, the points in the QQ plot will roughly align along a **45-degree diagonal line**.
-3. **Deviations from the line** indicate departures from the expected distribution:
-   - **S-shaped curve**: Data has heavier or lighter tails than the theoretical distribution.
-   - **Upward or downward bending**: Skewness in the data.
+The QQ plot is constructed using the following steps:
 
-### **Common Uses:**
+1. Compute the empirical quantiles from the dataset.
+2. Compute the theoretical quantiles from the specified distribution.
+3. Plot the empirical quantiles on the $y$-axis against the theoretical quantiles on the $x$-axis.
 
-- Checking **normality** of a dataset before applying statistical tests.
-- Comparing the empirical distribution of a dataset with a theoretical one.
-- Detecting **outliers** or deviations from assumptions in modeling.
+The fundamental equation used to construct the QQ plot is:
 
-To plot QQ with your data, use the method `.qq_plot()` that has the following parameters:
+$$
+Q\_{\text{theoretical}}(p) = F^{-1}(p)
+$$
 
-- `id_distribution` (_str_): Identifier of the [distributions](/documentation/distributions/distributions.md) being analyzed.
-- `plot_title` (_str_): Title of the plot. Default is `"QQ PLOT"`.
-- `plot_xaxis_title` (_str_): Title of the X-axis. Default is `"Theoretical Quantiles"`.
-- `plot_yaxis_title` (_str_): Title of the Y-axis. Default is `"Sample Quantiles"`.
-- `plot_legend_title` (_str | None_): Title of the legend. If `None`, no title is displayed.
-- `plot_height` (_int_): Height of the plot in pixels. Default is `400`.
-- `plot_width` (_int_): Width of the plot in pixels. Default is `600`.
+$$
+Q*{\text{empirical}}(p) = X*{(i)}
+$$
 
-### **QQ Plot Marker Settings**
+where:
 
-- `qq_marker_name` (_str_): Label for the QQ plot markers in the legend. Default is `"Markers QQ"`.
-- `qq_marker_color` (_str_): Color of the QQ plot markers in RGBA format. Default is `"rgba(128,128,128,1)"` (gray).
-- `qq_marker_size` (_int_): Size of the QQ plot markers. Default is `6`.
+-   $F^{-1}(p)$ is the quantile function (inverse cumulative distribution function) of the theoretical distribution.
+-   $X_{i}$ is the $i$-th order statistic of the empirical data.
+-   $p$ represents the probability associated with each quantile, typically defined as:
 
-### **Rendering Options**
+$$
+p_i = \frac{i - 0.5}{n}
+$$
 
-- `plotly_plot_renderer` (_"png" | "jpeg" | "svg" | None_): Image format for exporting the plot when using Plotly. If `None`, the default setting is used.
-- `plot_engine` (_"plotly" | "matplotlib"_): Plotting engine to use. Default is `"plotly"`.
+where $n$ is the total number of observations, and $i$ is the index of the sorted data.
 
-If you only want to use the basic code, use it as follows:
+If the empirical data follows the theoretical distribution, the plotted points should align approximately along a 45-degree reference line:
+
+$$
+y = x
+$$
+
+### Interpretation of Deviations:
+
+-   **Linear alignment**: Indicates a strong fit with the theoretical distribution.
+-   **S-shaped deviations**: Suggest discrepancies in the tails, with potentially heavier or lighter tails than the theoretical distribution.
+-   **Curvature (concave or convex)**: Implies skewness or systematic deviations from the theoretical model.
+
+## Applications
+
+The QQ plot is widely used in statistical analysis, including:
+
+-   Checking normality assumptions before applying parametric tests.
+-   Comparing an observed dataset to a theoretical probability distribution.
+-   Identifying outliers or irregularities in data distributions.
+
+## Parameters
+
+The `.qq_plot()` function generates the QQ plot and accepts the following parameters:
+
+### General Parameters
+
+-   **`id_distribution`** (_str_):  
+    Identifier of the theoretical distribution to compare against the empirical dataset. See the [list of distributions](/documentation/distributions/continuous_distributions).
+
+-   **`plot_title`** (_str, optional_):  
+    Title of the QQ plot. Default: `"QQ Plot"`.
+
+-   **`plot_xaxis_title`** (_str, optional_):  
+    Label for the x-axis. Default: `"Theoretical Quantiles"`.
+
+-   **`plot_yaxis_title`** (_str, optional_):  
+    Label for the y-axis. Default: `"Sample Quantiles"`.
+
+-   **`plot_legend_title`** (_str | None, optional_):  
+    Title for the legend. If set to `None`, no legend title is displayed.
+
+-   **`plot_height`** (_int, optional_):  
+    Height of the plot in pixels. Default: `400`.
+
+-   **`plot_width`** (_int, optional_):  
+    Width of the plot in pixels. Default: `600`.
+
+### Marker Configuration
+
+-   **`qq_marker_name`** (_str, optional_):  
+    Label for the QQ plot markers in the legend. Default: `"Markers QQ"`.
+
+-   **`qq_marker_color`** (_str, optional_):  
+    Marker color in RGBA format. Default: `"rgba(128,128,128,1)"` (gray).
+
+-   **`qq_marker_size`** (_int, optional_):  
+    Size of the markers. Default: `6`.
+
+### Rendering Configuration
+
+-   **`plotly_plot_renderer`** (_"png" | "jpeg" | "svg" | None, optional_):  
+    Specifies the format for exporting the plot when using Plotly. If set to `None`, the default renderer format is applied.
+
+-   **`plot_engine`** (_"plotly" | "matplotlib", optional_):  
+    Specifies the visualization backend. Default: `"plotly"`.
+
+## Default Usage
+
+The following example demonstrates the basic usage of the `.qq_plot()` function with default parameters:
 
 ```python
-phi.qq_plot(id_distribution="weibull")
+phi.qq_plot(id_distribution="normal")
 ```
 
-> 💡 Remember to change `weibull` with the distribution that you need
+In this example, the empirical dataset is fitted, and a QQ plot is generated to compare it against a normal distribution.
 
-![QQ](/fit/plot_qq.png)
+## Complete Usage
+
+A more comprehensive example includes optional parameters to customize the QQ plot’s appearance:
+
+```python
+phi.qq_plot(
+    id_distribution="weibull",
+    plot_title="Weibull QQ Plot",
+    plot_xaxis_title="Theoretical Weibull Quantiles",
+    plot_yaxis_title="Empirical Quantiles",
+    plot_legend_title="QQ Plot Comparison",
+    plot_height=500,
+    plot_width=700,
+    qq_marker_name="Sample Points",
+    qq_marker_color="rgba(0,0,255,1)",
+    qq_marker_size=8,
+    plot_engine="matplotlib"
+)
+```
+
+This example customizes the QQ plot’s title, axis labels, marker properties, and rendering engine.
+
+## Example Visualization
+
+Below is an example of a QQ plot comparing an empirical dataset to a theoretical distribution.
+
+<img src="/fit/plot_qq.png" alt="QQ Plot" width="600"/>
+
+If the empirical data follows the theoretical distribution, the plotted points will align along the 45-degree reference line ($y = x$). Deviations from this line indicate differences between the empirical data distribution and the theoretical model.

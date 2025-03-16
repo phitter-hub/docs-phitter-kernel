@@ -83,6 +83,27 @@ $$ \mathrm{Mode}(X)=\left\{\begin{array}{cl}\mu+\sigma\frac{(1+\xi)^{-\xi}-1}{\x
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/generalized_extreme_value)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/generalized_extreme_value.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/19qHvnTJGVVZ7zhi-yhauCOGhu0iAdkYJ5FFgwv1q5OI)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "generalized_extreme_value";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

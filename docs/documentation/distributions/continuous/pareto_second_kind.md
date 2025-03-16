@@ -81,6 +81,27 @@ $$ \mathrm{Mode}(X)=0 $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/pareto_second_kind)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/pareto_second_kind.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1hnBOqkbcRNuyRxaLP8eHei5MRwUFDb1bgdcZYkpYKio)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "pareto_second_kind";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

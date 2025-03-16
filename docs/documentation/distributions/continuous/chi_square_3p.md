@@ -86,6 +86,27 @@ $$ \mathrm{Mode}(X)=\text{Loc}+\text{Sc}\times \text{max}(\text{df}-2,0) $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/chi_square_3p)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/chi_square_3p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/15tf3ZKbEgR3JWQRbMT2OaNij3INTGGUuNsR01NCDFJw)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "chi_square_3p";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

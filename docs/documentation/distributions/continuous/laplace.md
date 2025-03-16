@@ -80,6 +80,27 @@ $$ \mathrm{Mode}(X)=\mu $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/laplace)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/laplace.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/110gPFTHOnQqecbXrjq3Wqv52I5Cw93UjL7eoSVC1DIs)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "laplace";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

@@ -81,6 +81,27 @@ $$ \mathrm{Mode}(X)=\frac{\text{df}_{2}\left(\text{df}_{1}-2\right)}{\text{df}_{
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/f)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/f.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/137gYI8B6MDnqFoQ4bY1crdpFSKtPzRgaJS564SY_CUY)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "f";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

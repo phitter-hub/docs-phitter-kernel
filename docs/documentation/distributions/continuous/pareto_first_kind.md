@@ -81,6 +81,27 @@ $$ \mathrm{Mode}(X)=\text{Loc}+x_\mathrm{m} $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/pareto_first_kind)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/pareto_first_kind.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1T-Sjp0yCxbJpP9njbovOiFpbP8PrwI5jlj66odxAw5E)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "pareto_first_kind";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
+
     

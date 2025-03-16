@@ -79,6 +79,26 @@ $$ \mathrm{Mode}(X)\in [a, b] $$
 **Spreadsheet Documents**
 
 -   [Phitter playground](https://phitter.io/distributions/discrete/uniform)
+-   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/discrete/uniform.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1Ahl2ugOKkUCVWzzc_aNHwlA5Af4sHpTwqSiFIyYPsfM)
+
+<script setup>
+const downloadExcelFile = function() {
+    const fileId = "uniform";
+    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/discrete/${fileId}.xlsx`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${fileId}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
+
+<style module>
+a {
+  cursor: pointer;
+}
+</style>
     

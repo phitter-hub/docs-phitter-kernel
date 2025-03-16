@@ -1,45 +1,75 @@
-# Graph Empirical Cumulative Distribution Function (ECDF) of your Data
+# Empirical Cumulative Distribution Function
 
-**ECDF (Empirical Cumulative Distribution Function)** is a statistical function that estimates the cumulative distribution of a dataset. It shows the proportion of data points that are less than or equal to a given value.
+The Empirical Cumulative Distribution Function (ECDF) provides a non-parametric estimation of the cumulative distribution of a given dataset. Unlike parametric approaches, the ECDF does not impose assumptions regarding the underlying distribution, allowing for an unbiased representation of the observed data.
 
-### Key characteristics:
+## Properties
 
-- Unlike a **histogram**, which groups data into bins, the **ECDF** represents each individual data point.
-- The function is **non-decreasing** and ranges from **0 to 1**.
-- It provides a more detailed view of the distribution, especially for small datasets.
+-   The ECDF is a non-decreasing function that is bounded within the interval $[0, 1]$.
+-   It represents the cumulative probability of observations up to a specified value.
+-   It is particularly useful for visualizing data distributions, especially in smaller datasets where individual observations significantly influence the overall distribution.
 
-### How it works:
+## Calculation
 
-For a dataset with `n` values, the ECDF at a given point `x` is calculated as:
+For a dataset consisting of $n$ observations, the ECDF at a given point $x$ is defined as:
 
 $$
-ECDF(x) = \frac{\text{Number of values} \leq x}{n}
+\text{ECDF}(x) = \frac{\text{Number of observations } \leq x}{n}
 $$
 
-Each step in the ECDF plot corresponds to an observed data point.
+## ECDF Plotting
 
-To plot ECDF with your data, use the method `.plot_ecdf()` that has the following parameters:
+The ECDF can be visualized using the `.plot_ecdf()` method. This function offers several customizable parameters.
 
-- `plot_title` (_str_): Title of the plot. Default is `"ECDF"`.
-- `plot_xaxis_title` (_str_): Title of the X-axis. Default is `"Domain"`.
-- `plot_yaxis_title` (_str_): Title of the Y-axis. Default is `"Cumulative Distribution Function"`.
-- `plot_xaxis_min_offset` (_float_): Offset applied to the minimum value of the X-axis for better visualization. Default is `0.3`.
-- `plot_xaxis_max_offset` (_float_): Offset applied to the maximum value of the X-axis for better visualization. Default is `0.3`.
-- `plot_legend_title` (_str | None_): Title of the legend. If `None`, no title is displayed.
-- `plot_height` (_int_): Height of the plot in pixels. Default is `400`.
-- `plot_width` (_int_): Width of the plot in pixels. Default is `600`.
-- `plot_line_color` (_str_): Color of the ECDF line in RGBA format. Default is `"rgba(255,0,0,1)"` (red).
-- `plot_line_width` (_int_): Thickness of the ECDF line. Default is `2`.
-- `plot_line_name` (_str_): Label for the ECDF line in the legend. Default is `"Empirical Distribution"`.
-- `plot_bar_color` (_str_): Color of the bars in RGBA format. Default is `"rgba(128,128,128,1)"` (gray).
-- `plot_bargap` (_float_): Spacing between bars (value between `0` and `1`). Default is `0.15`.
-- `plotly_plot_renderer` (_"png" | "jpeg" | "svg" | None_): Image format for exporting the plot when using Plotly. If `None`, the default setting is used.
-- `plot_engine` (_"plotly" | "matplotlib"_): Plotting engine to use. Default is `"plotly"`.
+### Parameters
 
-If you only want to use the basic code, use it as follows:
+-   **`plot_title`** (_str, optional_): The title of the plot. Default: _"ECDF"_.
+-   **`plot_xaxis_title`** (_str, optional_): The label for the horizontal axis. Default: _"Domain"_.
+-   **`plot_yaxis_title`** (_str, optional_): The label for the vertical axis. Default: _"Cumulative Distribution Function"_.
+-   **`plot_xaxis_range`** (_tuple[float, float], optional_): The range of values for the horizontal axis. If not specified, the range adjusts automatically to the data.
+-   **`plot_xaxis_margin`** (_float, optional_): The margin applied around the data domain. Default: `0.3`.
+-   **`plot_legend_title`** (_str or None, optional_): The title of the legend. If `None`, no legend title is displayed.
+-   **`plot_height`** (_int, optional_): The height of the plot in pixels. Default: `400`.
+-   **`plot_width`** (_int, optional_): The width of the plot in pixels. Default: `400`.
+-   **`plot_line_color`** (_str, optional_): The color of the ECDF line, specified in RGBA format.
+-   **`plot_line_width`** (_int, optional_): The thickness of the ECDF line. Default: `2`.
+-   **`plot_line_name`** (_str, optional_): The label for the ECDF in the plot legend. Default: _"Empirical Distribution"_.
+-   **`plotly_plot_renderer`** (_"png" | "jpeg" | "svg" | None, optional_): The output format when using Plotly as the rendering engine. Default: `None`, which uses the default renderer.
+-   **`plot_engine`** (_"plotly" | "matplotlib", optional_): Specifies the plotting library to be used. Default: _"plotly"_.
+
+## Default Usage
+
+For a basic implementation without additional customization, the ECDF plot can be generated as follows:
 
 ```python
 phi.plot_ecdf()
 ```
 
-![ECDF](/fit/plot_ecdf.png)
+## Complete Usage
+
+For a more detailed customization of the ECDF plot, the following implementation demonstrates the use of multiple parameters:
+
+```python
+phi.plot_ecdf(
+    plot_title="Empirical CDF of Sample Data",
+    plot_xaxis_title="Observed Values",
+    plot_yaxis_title="Cumulative Probability",
+    plot_xaxis_range=(0, 100),
+    plot_xaxis_margin=0.2,
+    plot_legend_title="ECDF Curve",
+    plot_height=600,
+    plot_width=800,
+    plot_line_color="rgba(255,0,0,0.8)",
+    plot_line_width=3,
+    plot_line_name="Empirical CDF",
+    plotly_plot_renderer="png",
+    plot_engine="plotly"
+)
+```
+
+## Example Visualization
+
+The following figure provides an example of an ECDF plot generated using the `.plot_ecdf()` method.
+
+<img src="/fit/plot_ecdf.png" alt="ECDF Example Plot" width="600"/>
+
+For further details on additional functionalities and extended capabilities, refer to the subsequent sections of this documentation.
