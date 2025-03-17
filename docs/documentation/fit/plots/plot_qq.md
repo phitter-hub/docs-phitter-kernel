@@ -13,11 +13,11 @@ The QQ plot is constructed using the following steps:
 The fundamental equation used to construct the QQ plot is:
 
 $$
-Q\_{\text{theoretical}}(p) = F^{-1}(p)
+Q_{\text{theoretical}}(p) = F^{-1}(p)
 $$
 
 $$
-Q*{\text{empirical}}(p) = X*{(i)}
+Q_{\text{empirical}}(p) = X_{i}
 $$
 
 where:
