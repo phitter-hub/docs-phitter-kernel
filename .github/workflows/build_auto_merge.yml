@@ -1,4 +1,4 @@
-name: Build and Auto-merge
+name: Build and Auto Merge
 
 on:
     pull_request:

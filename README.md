@@ -16,7 +16,11 @@
     <a href="https://pypi.org/project/phitter" target="_blank">
         <img src="https://img.shields.io/pypi/pyversions/phitter?color=brightgreen" alt="Supported Python versions">
     </a>
+    <a href="https://github.com/phitterio/docs-phitter-kernel/actions">
+        <img src="https://github.com/phitterio/docs-phitter-kernel/workflows/Build%20and%20Auto%20Merge/badge.svg" alt="Build Status">
+    </a>
 </p>
+
 
 <p>
     Phitter identifies optimal probability distributions by analyzing datasets, evaluating over 80 continuous and discrete distributions with goodness-of-fit tests
