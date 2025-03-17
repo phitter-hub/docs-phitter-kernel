@@ -1,0 +1,32 @@
+name: Build and Auto-Merge
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "16"
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Build docs
+              run: npm run docs:build
+
+            - name: Merge PR if build is successful
+              if: ${{ github.event_name == 'pull_request' && success() }}
+              uses: peter-evans/merge-pull-request@v2
+              with:
+                  pull-request: ${{ github.event.pull_request.number }}
+                  merge-method: merge
