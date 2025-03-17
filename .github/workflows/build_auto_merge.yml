@@ -1,32 +1,44 @@
-name: Build and Auto-Merge
+name: Build and Auto-merge
 
 on:
-    push:
-        branches: [main]
     pull_request:
+        branches: [main]
+    push:
         branches: [main]
 
 jobs:
     build:
         runs-on: ubuntu-latest
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v3
 
-            - name: Set up Node.js
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Setup Node.js
               uses: actions/setup-node@v3
               with:
-                  node-version: "16"
+                  node-version: "18"
+                  cache: "npm"
 
             - name: Install dependencies
-              run: npm install
+              run: npm ci
 
-            - name: Build docs
+            - name: Build documentation
               run: npm run docs:build
 
-            - name: Merge PR if build is successful
-              if: ${{ github.event_name == 'pull_request' && success() }}
-              uses: peter-evans/merge-pull-request@v2
-              with:
-                  pull-request: ${{ github.event.pull_request.number }}
-                  merge-method: merge
+    automerge:
+        needs: build
+        runs-on: ubuntu-latest
+        if: github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Auto-merge
+              uses: pascalgn/automerge-action@v0.15.6
+              env:
+                  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+                  MERGE_LABELS: ""
+                  MERGE_METHOD: "merge"
+                  MERGE_COMMIT_MESSAGE: "Auto-merge PR #{pullRequest.number}: {pullRequest.title}"
+                  MERGE_RETRY_SLEEP: "60000"
+                  MERGE_RETRIES: "6"
