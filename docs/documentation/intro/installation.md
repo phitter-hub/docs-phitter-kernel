@@ -22,6 +22,6 @@ To install a specific version, append the desired version number. For instance, 
 pip install phitter==0.7.2
 ```
 
-Detailed information concerning each release is provided in the [Release Notes](/release/release_main.md).
+Detailed information concerning each release is provided in the [Release Notes](/release/release-main.md).
 
 > **Note:** It is strongly recommended to install the latest version of Phitter in order to ensure optimal stability and performance.
