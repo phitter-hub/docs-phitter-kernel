@@ -59,7 +59,7 @@ The `.qq_plot()` function generates the QQ plot and accepts the following parame
 ### General Parameters
 
 -   **`id_distribution`** (_str_):  
-    Identifier of the theoretical distribution to compare against the empirical dataset. See the [list of distributions](/documentation/distributions/continuous_distributions).
+    Identifier of the theoretical distribution to compare against the empirical dataset. See the [list of distributions](/documentation/distributions/continuous-distributions).
 
 -   **`plot_title`** (_str, optional_):  
     Title of the QQ plot. Default: `"QQ Plot"`.

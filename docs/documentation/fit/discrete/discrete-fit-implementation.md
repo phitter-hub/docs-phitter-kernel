@@ -21,7 +21,7 @@ To perform a discrete fit, the `Phitter` class must be instantiated. The class a
     Size of a random subset utilized specifically for parameter estimation of the distributions. Default is `None`.
 
 -   `distributions_to_fit` (_list[str] or "all", optional_):  
-    List specifying discrete distributions to consider in the analysis. Refer to the [Discrete Distributions Documentation](/documentation/distributions/discrete_distributions) for available identifiers. The default value `"all"` fits all available discrete distributions.
+    List specifying discrete distributions to consider in the analysis. Refer to the [Discrete Distributions Documentation](/documentation/distributions/discrete-distributions) for available identifiers. The default value `"all"` fits all available discrete distributions.
 
 -   `exclude_distributions` (_list[str] or "any", optional_):  
     Identifies distributions explicitly excluded from the fitting procedure. Default is `"any"`, indicating no exclusions.

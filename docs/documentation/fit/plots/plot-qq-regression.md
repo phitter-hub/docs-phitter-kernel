@@ -58,7 +58,7 @@ If the dataset follows the theoretical distribution, the regression line should 
 ### General Parameters
 
 -   **`id_distribution`** (_str_):  
-    Identifier of the theoretical probability distribution under evaluation. The list of supported distributions is available in the [Distributions Documentation](/documentation/distributions/continuous_distributions).
+    Identifier of the theoretical probability distribution under evaluation. The list of supported distributions is available in the [Distributions Documentation](/documentation/distributions/continuous-distributions).
 
 -   **`plot_title`** (_str, optional_):  
     The title of the generated plot. _(Default: `"QQ Plot - Regression"`)_

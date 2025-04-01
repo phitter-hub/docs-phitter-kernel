@@ -4,7 +4,7 @@ The `.plot_distribution()` method generates a histogram of a given dataset overl
 
 ## **Parameters**
 
--   **`id_distribution`** (_str_): The identifier of the probability distribution to be plotted. A complete list of available distributions is provided in the [Distributions documentation](/documentation/distributions/continuous_distributions).
+-   **`id_distribution`** (_str_): The identifier of the probability distribution to be plotted. A complete list of available distributions is provided in the [Distributions documentation](/documentation/distributions/continuous-distributions).
 -   **`plot_title`** (_str_, optional): The title of the plot. Default value: `"HISTOGRAM"`.
 -   **`plot_xaxis_title`** (_str_, optional): The title of the x-axis. Default value: `"Domain"`.
 -   **`plot_yaxis_title`** (_str_, optional): The title of the y-axis. Default value: `"Probability Density/Mass Function"`.

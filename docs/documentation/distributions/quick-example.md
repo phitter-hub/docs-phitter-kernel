@@ -1,6 +1,6 @@
 # Quick Example
 
-To use a [distribution](/documentation/distributions/continuous_distributions), follow the steps below.
+To use a [distribution](/documentation/distributions/continuous-distributions), follow the steps below.
 
 > **Example:** This demonstration utilizes the [Normal](/documentation/distributions/continuous/normal) distribution.
 

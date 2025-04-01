@@ -3,12 +3,11 @@ import "./custom.css";
 import "./publicSans.css";
 
 import Home from "./components/Home.vue";
+import Logo from "./components/Logo.vue";
 
 const components = {
     Home,
-    // GaltonBoard,
-    // DarkPhitterLogo,
-    // LightPhitterLogo,
+    Logo,
 };
 
 export default {

@@ -2,9 +2,9 @@
 
 When dealing with extensive datasets, Phitter provides two primary strategies to accelerate the fitting procedure:
 
--   **Strategy 1**: Specify a subsample size smaller than the original dataset by using the `subsample_size` parameter. A subsample size under 100,000 is recommended. Phitter will randomly select observations up to the specified limit. Detailed usage information is located in the sections [Create Continuous Fit](/documentation/fit/continuous/continuous_fit_implementation) and [Create Discrete Fit](/documentation/fit/discrete/discrete_fit_implementation).
+-   **Strategy 1**: Specify a subsample size smaller than the original dataset by using the `subsample_size` parameter. A subsample size under 100,000 is recommended. Phitter will randomly select observations up to the specified limit. Detailed usage information is located in the sections [Create Continuous Fit](/documentation/fit/continuous/continuous-fit-implementation) and [Create Discrete Fit](/documentation/fit/discrete/discrete-fit-implementation).
 
--   **Strategy 2**: Specify a smaller subsample for parameter estimation by using the `subsample_estimation_size` parameter. A subsample size under 10,000 is suggested. In this approach, Phitter will draw a random subsample to estimate distribution parameters. Additional instructions appear in the sections [Create Continuous Fit](/documentation/fit/continuous/continuous_fit_implementation) and [Create Discrete Fit](/documentation/fit/discrete/discrete_fit_implementation).
+-   **Strategy 2**: Specify a smaller subsample for parameter estimation by using the `subsample_estimation_size` parameter. A subsample size under 10,000 is suggested. In this approach, Phitter will draw a random subsample to estimate distribution parameters. Additional instructions appear in the sections [Create Continuous Fit](/documentation/fit/continuous/continuous-fit-implementation) and [Create Discrete Fit](/documentation/fit/discrete/discrete-fit-implementation).
 
 Either of these strategies—or both in combination—may be implemented to achieve improved performance. For instance:
 

@@ -24,7 +24,7 @@ A continuous fit can be performed by instantiating the `Phitter` class from the 
     Determines the size of a random subset used exclusively to estimate parameters for each distribution, if parameter estimation subsampling is required.
 
 -   **`distributions_to_fit`** (`list[str]` or `"all"`, optional; default: `"all"`):  
-    Identifies which distributions are evaluated during fitting. Accepts either a list of specific distributions (see [distributions documentation](/documentation/distributions/continuous_distributions)) or the string `"all"` to fit every available distribution.
+    Identifies which distributions are evaluated during fitting. Accepts either a list of specific distributions (see [distributions documentation](/documentation/distributions/continuous-distributions)) or the string `"all"` to fit every available distribution.
 
 -   **`exclude_distributions`** (`list[str]` or `str`, optional; default: `"any"`):  
     Specifies distributions that must be explicitly excluded from fitting. If set to `"any"`, no distributions are excluded.

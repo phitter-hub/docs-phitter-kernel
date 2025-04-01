@@ -26,7 +26,7 @@ To compare the ECDF of an empirical dataset with the cumulative distribution fun
 
 ### General Parameters
 
-- **`id_distribution`** (_str_): Identifier of the theoretical distribution against which the empirical data is compared. A full list of available distributions can be found in the [distributions documentation](/documentation/distributions/continuous_distributions).
+- **`id_distribution`** (_str_): Identifier of the theoretical distribution against which the empirical data is compared. A full list of available distributions can be found in the [distributions documentation](/documentation/distributions/continuous-distributions).
 - **`plot_title`** (_str, optional_): Title of the plot. Default is `"ECDF"`.
 - **`plot_xaxis_title`** (_str, optional_): Label for the x-axis. Default is `"Domain"`.
 - **`plot_yaxis_title`** (_str, optional_): Label for the y-axis. Default is `"Cumulative Distribution Function"`.

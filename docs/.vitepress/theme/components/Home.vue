@@ -2,16 +2,7 @@
     <main class="home-main">
         <section class="home-s1">
             <div class="home-s1_x">
-                <div class="logo-container">
-                    <span v-show="!isDarkTheme" class="logo">
-                        <LightPhitterLogo class="logo" />
-                    </span>
-
-                    <span v-show="isDarkTheme" class="logo">
-                        <DarkPhitterLogo />
-                    </span>
-                </div>
-
+                <div class="logo-container"><Logo /></div>
                 <p>
                     Phitter identifies optimal probability distributions by analyzing datasets, evaluating over 80 continuous and discrete distributions with goodness-of-fit tests
                     and interactive visualizations. It provides modeling guides and methodological spreadsheets for applications in data science, operations research, and AI.
@@ -22,7 +13,7 @@
                 <p>This web contains the documentation of the <a href="https://github.com/phitterio/phitter-kernel" target="_blank">Phitter Python Library</a></p>
 
                 <div class="a-buttons-section">
-                    <a class="a-button" href="/documentation/intro/philosophy">Documentation</a>
+                    <a class="a-button" href="/documentation/intro/what-is-phitter">Documentation</a>
                     <a class="a-button ab2" href="https://phitter.io/" target="_blank">Phitter web</a>
                 </div>
             </div>
@@ -38,15 +29,13 @@
 import { defineComponent } from "vue";
 import { useData } from "vitepress";
 import GaltonBoard from "./GaltonBoard.vue";
-import DarkPhitterLogo from "../components/Icons/DarkPhitterLogo.vue";
-import LightPhitterLogo from "../components/Icons/LightPhitterLogo.vue";
+import Logo from "./Logo.vue";
 
 export default defineComponent({
     name: "Home",
-    components: { GaltonBoard, DarkPhitterLogo, LightPhitterLogo },
+    components: { GaltonBoard, Logo },
     data() {
         return {
-            isDarkTheme: false,
             themeChangeCounter: 0,
             reloadGalton: true,
         };
@@ -68,14 +57,13 @@ export default defineComponent({
             });
         },
     },
-    mounted() {
+    created() {
         const { isDark } = useData();
         this.isDarkTheme = isDark.value;
 
         this.$watch(
             () => isDark.value,
             (newValue: boolean) => {
-                this.isDarkTheme = newValue;
                 this.reinitializeGaltonBoard();
             }
         );
