@@ -86,13 +86,13 @@ $$ \mathrm{Mode}(X)=\text{Loc}+\beta\cdot\left(k-1\right) $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/erlang_3p)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/erlang_3p.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/erlang_3p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1EvFPyOAL-TPQyNf7sAXfqgHqap8sGynH0XxrLRVP12M)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "erlang_3p";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

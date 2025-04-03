@@ -82,13 +82,13 @@ $$ \mathrm{Mode}(X)=\text{Loc}+A\left( \frac{B-1}{BC+1} \right)^{\frac{1}{B}} $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/burr_4p)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/burr_4p.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/burr_4p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1tEk3O2yvANj_PlLqACuwvRSqYYGQVRFH1SPMdLGYnz4)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "burr_4p";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

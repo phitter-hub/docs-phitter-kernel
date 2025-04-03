@@ -81,13 +81,13 @@ $$ \mathrm{Mode}(X)=\alpha\left(\frac{\beta-1}{\beta+1}\right)^{1/\beta} $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/loglogistic)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/loglogistic.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/loglogistic.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1WWXRuI6AP9n_n47ikOHWUjkfCYUOQgzhDjRsKBKEHXA)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "loglogistic";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

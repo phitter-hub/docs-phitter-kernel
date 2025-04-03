@@ -242,9 +242,9 @@ export default defineConfig({
             ],
         },
         socialLinks: [
-            { icon: "github", link: "https://github.com/phitterio/phitter-kernel" },
-            { icon: "youtube", link: "https://github.com/phitterio/phitter-kernel" },
-            { icon: "x", link: "https://github.com/phitterio/phitter-kernel" },
+            { icon: "github", link: "https://github.com/phitter-core/phitter-kernel" },
+            { icon: "youtube", link: "https://github.com/phitter-core/phitter-kernel" },
+            { icon: "x", link: "https://github.com/phitter-core/phitter-kernel" },
         ],
     },
     markdown: {

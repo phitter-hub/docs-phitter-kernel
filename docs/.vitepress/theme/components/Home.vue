@@ -10,7 +10,7 @@
                     FIFO, LIFO and PBS, ensuring adaptability to diverse research and operational needs.
                 </p>
 
-                <p>This web contains the documentation of the <a href="https://github.com/phitterio/phitter-kernel" target="_blank">Phitter Python Library</a></p>
+                <p>This web contains the documentation of the <a href="https://github.com/phitter-core/phitter-kernel" target="_blank">Phitter Python Library</a></p>
 
                 <div class="a-buttons-section">
                     <a class="a-button" href="/documentation/intro/what-is-phitter">Documentation</a>

@@ -86,13 +86,13 @@ $$ \mathrm{Mode}(X)=\text{Loc}+\frac{\beta}{\alpha+1} $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/inverse_gamma_3p)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/inverse_gamma_3p.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/inverse_gamma_3p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/16LCC6j_j1Cm7stc7LEd-C0ObUcZ-agL51ALGYxoZtrI)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "inverse_gamma_3p";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

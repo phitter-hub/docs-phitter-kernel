@@ -82,13 +82,13 @@ $$ \mathrm{Mode}(X)=0 $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/t_student)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/t_student.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/t_student.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1fGxJfFL5eXAWk8xNI6HgCX9SQuXi-m5mR83N1dMLJrg)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "t_student";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

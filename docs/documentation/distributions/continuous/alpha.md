@@ -85,13 +85,13 @@ $$ \mathrm{Mode}(X)=\text{Loc}+\text{Sc}\frac{(\sqrt{\alpha^{2}+8}-\alpha)}{4} $
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/alpha)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/alpha.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/alpha.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1yRovxx1YbqgEul65DjjXetysc_4qgX2a_2NQQA1AxCA)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "alpha";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

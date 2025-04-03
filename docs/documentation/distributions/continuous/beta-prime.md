@@ -83,13 +83,13 @@ $$ \mathrm{Mode}(X)=\frac{\alpha-1}{\beta+1} $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/beta_prime)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/beta_prime.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/beta_prime.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1-8cKeS9D6YixQE_uLig7UarXcoQoE-341yHDj8sfXA8)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "beta_prime";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

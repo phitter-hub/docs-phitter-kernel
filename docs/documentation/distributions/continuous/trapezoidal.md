@@ -82,13 +82,13 @@ $$ \mathrm{Mode}(X)\in [b,c] $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/trapezoidal)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/trapezoidal.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/trapezoidal.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1Gsk5M_R2q9Or8RTggKtTkqEk-cN6IuDgYqbmhFm5Xlw)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "trapezoidal";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

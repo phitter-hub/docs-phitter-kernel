@@ -87,13 +87,13 @@ $$ \mathrm{Mode}(X)=\mu $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/half_normal)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/half_normal.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/half_normal.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1HQpNSNIhZPzMQvWWKyShnYNH74d1Bhs_d6k9La52V9M)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "half_normal";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

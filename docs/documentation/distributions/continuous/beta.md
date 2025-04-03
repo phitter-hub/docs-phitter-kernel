@@ -84,13 +84,13 @@ $$ \mathrm{Mode}(X)=A+(B-A)\frac{\alpha-1}{\alpha+\beta-2} \quad \text{if }\alph
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/beta)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/beta.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/beta.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1P7NDy-9toV3dv64gabnr8l2NjB1xt_Ani5IVMTx3gyU)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "beta";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

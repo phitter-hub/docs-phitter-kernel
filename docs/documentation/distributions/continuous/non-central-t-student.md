@@ -87,13 +87,13 @@ $$ \mathrm{Mode}(X)=\arg\max_{x}f_{X}\left(x\right) $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/non_central_t_student)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/non_central_t_student.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/non_central_t_student.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1u8pseBDM3brw0AXlru1cprOsfQuHMWfvfDbz2XxKoOY)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "non_central_t_student";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

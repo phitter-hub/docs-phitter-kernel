@@ -1,8 +1,8 @@
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://gist.githubusercontent.com/phitterio/66bc7f3674eac01ae646e30ba697a6d7/raw/e96dbba0eb26b20d35e608fefc3984bd87f0010b/DarkPhitterLogo.svg" width="350">
-        <source media="(prefers-color-scheme: light)" srcset="https://gist.githubusercontent.com/phitterio/170ce460d7e766545265772525edecf6/raw/71b4867c6e5683455cf1d68bea5bea7eda55ce7d/LightPhitterLogo.svg" width="350">
-        <img alt="phitter-dark-logo" src="https://gist.githubusercontent.com/phitterio/170ce460d7e766545265772525edecf6/raw/71b4867c6e5683455cf1d68bea5bea7eda55ce7d/LightPhitterLogo.svg" width="350">
+        <source media="(prefers-color-scheme: dark)" srcset="https://gist.githubusercontent.com/phitter-core/66bc7f3674eac01ae646e30ba697a6d7/raw/e96dbba0eb26b20d35e608fefc3984bd87f0010b/DarkPhitterLogo.svg" width="350">
+        <source media="(prefers-color-scheme: light)" srcset="https://gist.githubusercontent.com/phitter-core/170ce460d7e766545265772525edecf6/raw/71b4867c6e5683455cf1d68bea5bea7eda55ce7d/LightPhitterLogo.svg" width="350">
+        <img alt="phitter-dark-logo" src="https://gist.githubusercontent.com/phitter-core/170ce460d7e766545265772525edecf6/raw/71b4867c6e5683455cf1d68bea5bea7eda55ce7d/LightPhitterLogo.svg" width="350">
     </picture>
 </p>
 
@@ -16,8 +16,8 @@
     <a href="https://pypi.org/project/phitter" target="_blank">
         <img src="https://img.shields.io/pypi/pyversions/phitter?color=brightgreen" alt="Supported Python versions">
     </a>
-    <a href="https://github.com/phitterio/docs-phitter-kernel/actions">
-        <img src="https://github.com/phitterio/docs-phitter-kernel/workflows/Build%20and%20Auto%20Merge/badge.svg" alt="Build Status">
+    <a href="https://github.com/phitter-core/docs-phitter-kernel/actions">
+        <img src="https://github.com/phitter-core/docs-phitter-kernel/workflows/Build%20and%20Auto%20Merge/badge.svg" alt="Build Status">
     </a>
 </p>
 
@@ -29,4 +29,4 @@
     FIFO, LIFO and PBS, ensuring adaptability to diverse research and operational needs.
 </p>
 
-<p>This web contains the documentation of the <a href="https://github.com/phitterio/phitter-kernel" target="_blank">Phitter Python Library</a></p>
+<p>This web contains the documentation of the <a href="https://github.com/phitter-core/phitter-kernel" target="_blank">Phitter Python Library</a></p>

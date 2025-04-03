@@ -83,13 +83,13 @@ $$ \mathrm{Mode}(X)=\text{Loc}+b{\left(\frac{ap-1}{a+1}\right)}^{\tfrac{1}{a}} $
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/dagum_4p)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/dagum_4p.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/dagum_4p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1ZkKqvVdy7CvhvXwK830F6GWJrdNxoXBxJYeFD6XC2DM)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "dagum_4p";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

@@ -87,13 +87,13 @@ $$ \mathrm{Mode}(X)=\text{Loc}+\text{Sc}\frac{\alpha-1}{\beta+1} $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/beta_prime_4p)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/beta_prime_4p.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/beta_prime_4p.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1vlaZrj_jX9oNGwjW0o4Z1AUTuUTGE8Z-Akis_wb7Jq4)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "beta_prime_4p";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

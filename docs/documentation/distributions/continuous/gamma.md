@@ -84,13 +84,13 @@ $$ \mathrm{Mode}(X)=\beta \text{P}^{-1}\left(\alpha,\frac{1}{2}\right) $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/gamma)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/gamma.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/gamma.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1HgD3a1zOml7Hy9PMVvFwQwrbmbs8iPbH-zQMowH0LVE)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "gamma";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

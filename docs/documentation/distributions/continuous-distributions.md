@@ -82,7 +82,7 @@ In this section is a summarize of the distributions, the link to the pgitter pla
 
 <script setup>
 const downloadExcelFile = function(fileId) {
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

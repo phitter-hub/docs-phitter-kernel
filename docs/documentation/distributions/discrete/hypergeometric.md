@@ -82,13 +82,13 @@ $$ \mathrm{Mode}(X)=\left \lfloor \frac{(n+1)(K+1)}{N+2} \right \rfloor $$
 
 -   [Phitter playground](https://phitter.io/distributions/discrete/hypergeometric)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/discrete/hypergeometric.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/discrete/hypergeometric.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/10xUqKVoFzUiukuYt6VFwlaetMDTdGulHQPEWl1rJiMA)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "hypergeometric";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/discrete/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/discrete/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

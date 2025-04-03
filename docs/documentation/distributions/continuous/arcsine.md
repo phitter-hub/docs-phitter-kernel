@@ -81,13 +81,13 @@ $$ \mathrm{Mode}(X)=\text{undefined} $$
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/arcsine)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/arcsine.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/arcsine.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1q8SKX4gmSbpGzimRvjopzaZ4KrEV5NY1EPmf1G1T7NQ)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "arcsine";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);

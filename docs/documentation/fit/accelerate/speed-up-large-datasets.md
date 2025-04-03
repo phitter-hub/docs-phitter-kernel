@@ -31,4 +31,4 @@ This tutorial shows how to fit a million data points in less than 20 seconds on 
 
 |             Tutorial             |                                                                                                               Notebooks                                                                                                               |
 | :------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| **Fit Accelerate [Sample>100K]** | <a target="_blank" href="https://colab.research.google.com/github/phitterio/phitter-kernel/blob/main/examples/fit/fit_accelerate.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
+| **Fit Accelerate [Sample>100K]** | <a target="_blank" href="https://colab.research.google.com/github/phitter-core/phitter-kernel/blob/main/examples/fit/fit_accelerate.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |

@@ -90,13 +90,13 @@ $$ \mathrm{Mode}(X)=\text{Loc}+\frac{\text{Sc}}{\sqrt2\chi}\sqrt{(\chi^2-2)+\sqr
 
 -   [Phitter playground](https://phitter.io/distributions/continuous/argus)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
--   [Excel file from GitHub repository](https://github.com/phitterio/phitter-files/blob/main/continuous/argus.xlsx)
+-   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/continuous/argus.xlsx)
 -   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1u2x7IFUSB7rEyhs7s6-C2btT1Bk5aCr4WiUYEML-8xs)
 
 <script setup>
 const downloadExcelFile = function() {
     const fileId = "argus";
-    const url = `https://raw.githubusercontent.com/phitterio/phitter-files/main/continuous/${fileId}.xlsx`;
+    const url = `https://raw.githubusercontent.com/phitter-core/phitter-files/main/continuous/${fileId}.xlsx`;
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", `${fileId}.xlsx`);
