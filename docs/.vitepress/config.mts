@@ -231,9 +231,11 @@ export default defineConfig({
                             text: "Version 1",
                             collapsed: true,
                             items: [{ text: "Version 1.0", collapsed: true, items: [
-                                { text: "What's new in v1.0.0", collapsed: true, link: "/release/v1/v1.0/v1.0.0" },
-                                { text: "What's new in v1.0.1", collapsed: true, link: "/release/v1/v1.0/v1.0.1" },
+                                { text: "What's new in v1.0.3", collapsed: true, link: "/release/v1/v1.0/v1.0.3" },
                                 { text: "What's new in v1.0.2", collapsed: true, link: "/release/v1/v1.0/v1.0.2" },
+                                { text: "What's new in v1.0.1", collapsed: true, link: "/release/v1/v1.0/v1.0.1" },
+                                { text: "What's new in v1.0.0", collapsed: true, link: "/release/v1/v1.0/v1.0.0" },
+                                
                             ] }],
                         },
                         {
