@@ -10,7 +10,8 @@ export default defineConfig({
             provider: "local",
         },
         nav: [
-            { text: "Documentation", link: "/documentation/intro/what-is-phitter" },
+            { text: "API Reference", link: "/api/intro/what-is-phitter" },
+            { text: "User Guide", link: "/documentation/intro/what-is-phitter" },
             { text: "Releases", link: "/release/release-main" },
             { text: "Phitter Web", link: "https://phitter.io/" },
         ],
@@ -246,6 +247,51 @@ export default defineConfig({
                     ],
                 },
             ],
+            "/api/": [
+                {
+                    text: "Introduction",
+                    // collapsed: false,
+                    items: [
+                        { text: "What is Phitter?", link: "/api/intro/what-is-phitter" },
+                        { text: "Installation", link: "/api/intro/installation" },
+                    ],
+                },
+                {
+                    text: "Simulation",
+                    // collapsed: false,
+                    items: [
+                        {
+                            text: "Process Simulation",
+                            collapsed: true,
+                            items: [
+                                { text: "phitter.simulation.own_distribution", collapsed: true, link: "/api/simulation/process/own-distribution" },
+                                { text: "phitter.simulation.process_simulation", collapsed: true, link: "/api/simulation/process/process-simulation" },
+                            ],
+                        },
+                        {
+                            text: "Queueing Simulation",
+                            collapsed: true,
+                            items: [
+                                { text: "phitter.simulation.queueing_simulation", collapsed: true, link: "/api/simulation/queue/queueing-simulation" },
+                            ],
+                        },
+                    ],
+                },
+                {
+                    text: "Distributions",
+                    // collapsed: false,
+                    items: [
+                        {
+                            text: "Discrete",
+                            collapsed: true,
+                            items: [
+                                { text: "Discrete", link: "/api/distributions/discrete/discrete-distributions" },
+                                { text: "Installation", link: "/api/intro/installation" },
+                            ],
+                        },
+                    ],
+                },
+            ]
         },
         socialLinks: [
             { icon: "github", link: "https://github.com/phitter-core/phitter-kernel" },
