@@ -128,9 +128,8 @@ _class_ phitter.discrete.discrete*distributions.binomial.Binomial(\_parameters=N
 
 ## Binomial distribution
 
-## - Parameters Binomial Distribution: {“n”: \*, “p”: \*}
-
-## - <https://phitter.io/distributions/discrete/binomial>
+- Parameters Binomial Distribution: {“n”: \*, “p”: \*}
+  <https://phitter.io/distributions/discrete/binomial>
 
 ## cdf(_x_)
 
@@ -249,9 +248,8 @@ _class_ phitter.discrete.discrete*distributions.geometric.Geometric(\_parameters
 
 ## Geometric distribution
 
-## - Parameters Geometric Distribution: {“p”: \*}
-
-## - <https://phitter.io/distributions/discrete/geometric>
+- Parameters Geometric Distribution: {“p”: \*}
+  <https://phitter.io/distributions/discrete/geometric>
 
 ## cdf(_x_)
 
@@ -370,9 +368,8 @@ _class_ phitter.discrete.discrete*distributions.hypergeometric.Hypergeometric(\_
 
 ## Hypergeometric_distribution
 
-## - Parameters Hypergeometric Distribution: {“N”: \*, “K”: \*, “n”: \*}
-
-## - <https://phitter.io/distributions/discrete/hypergeometric>
+- Parameters Hypergeometric Distribution: {“N”: \*, “K”: \*, “n”: \*}
+  <https://phitter.io/distributions/discrete/hypergeometric>
 
 ## cdf(_x_)
 
@@ -491,9 +488,8 @@ _class_ phitter.discrete.discrete*distributions.logarithmic.Logarithmic(\_parame
 
 ## Logarithmic distribution
 
-## - Parameters Logarithmic Distribution: {“p”: \*}
-
-## - <https://phitter.io/distributions/discrete/logarithmic>
+- Parameters Logarithmic Distribution: {“p”: \*}
+  <https://phitter.io/distributions/discrete/logarithmic>
 
 ## cdf(_x_)
 
@@ -612,9 +608,8 @@ _class_ phitter.discrete.discrete*distributions.negative_binomial.NegativeBinomi
 
 ## Negative binomial distribution
 
-## - Parameters NegativeBinomial Distribution: {“r”: \*, “p”: \*}
-
-## - <https://phitter.io/distributions/discrete/negative_binomial>
+- Parameters NegativeBinomial Distribution: {“r”: \*, “p”: \*}
+  <https://phitter.io/distributions/discrete/negative_binomial>
 
 ## cdf(_x_)
 
@@ -733,9 +728,8 @@ _class_ phitter.discrete.discrete*distributions.poisson.Poisson(\_parameters=Non
 
 ## Poisson distribution
 
-## - Parameters Poisson Distribution: {“lambda”: \*}
-
-## - <https://phitter.io/distributions/discrete/poisson>
+- Parameters Poisson Distribution: {“lambda”: \*}
+  <https://phitter.io/distributions/discrete/poisson>
 
 ## cdf(_x_)
 
@@ -854,9 +848,8 @@ _class_ phitter.discrete.discrete*distributions.uniform.Uniform(\_parameters=Non
 
 ## Uniform distribution
 
-## - Parameters Uniform Distribution: {“a”: \*, “b”: \*}
-
-## - <https://phitter.io/distributions/discrete/uniform>
+- Parameters Uniform Distribution: {“a”: \*, “b”: \*}
+  <https://phitter.io/distributions/discrete/uniform>
 
 ## cdf(_x_)
 

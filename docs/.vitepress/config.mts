@@ -285,8 +285,14 @@ export default defineConfig({
                             text: "Discrete",
                             collapsed: true,
                             items: [
-                                { text: "Discrete", link: "/api/distributions/discrete/discrete-distributions" },
-                                { text: "Installation", link: "/api/intro/installation" },
+                                { text: "Discrete", link: "/api/distributions/discrete/discrete-distributions" }
+                            ],
+                        },
+                        {
+                            text: "Continuous",
+                            collapsed: true,
+                            items: [
+                                { text: "Continous", link: "/api/distributions/continous/continous" }
                             ],
                         },
                     ],
