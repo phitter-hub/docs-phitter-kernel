@@ -10,7 +10,8 @@ export default defineConfig({
             provider: "local",
         },
         nav: [
-            { text: "Documentation", link: "/documentation/intro/what-is-phitter" },
+            { text: "User Guide", link: "/documentation/intro/what-is-phitter" },
+            { text: "API Reference", link: "https://docs-phitter-kernel-api-reference.netlify.app/" },
             { text: "Releases", link: "/release/release-main" },
             { text: "Phitter Web", link: "https://phitter.io/" },
         ],
