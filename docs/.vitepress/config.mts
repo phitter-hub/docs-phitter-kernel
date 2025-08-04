@@ -10,7 +10,8 @@ export default defineConfig({
             provider: "local",
         },
         nav: [
-            { text: "Documentation", link: "/documentation/intro/what-is-phitter" },
+            { text: "User Guide", link: "/documentation/intro/what-is-phitter" },
+            { text: "API Reference", link: "https://docs-phitter-kernel-api-reference.netlify.app/" },
             { text: "Releases", link: "/release/release-main" },
             { text: "Phitter Web", link: "https://phitter.io/" },
             {
@@ -240,7 +241,13 @@ export default defineConfig({
                         {
                             text: "Version 1",
                             collapsed: true,
-                            items: [{ text: "Version 1.0", collapsed: true, items: [{ text: "What's new in v1.0.0", collapsed: true, link: "/release/v1/v1.0/v1.0.0" }] }],
+                            items: [{ text: "Version 1.0", collapsed: true, items: [
+                                { text: "What's new in v1.0.3", collapsed: true, link: "/release/v1/v1.0/v1.0.3" },
+                                { text: "What's new in v1.0.2", collapsed: true, link: "/release/v1/v1.0/v1.0.2" },
+                                { text: "What's new in v1.0.1", collapsed: true, link: "/release/v1/v1.0/v1.0.1" },
+                                { text: "What's new in v1.0.0", collapsed: true, link: "/release/v1/v1.0/v1.0.0" },
+                                
+                            ] }],
                         },
                         {
                             text: "Version 0",
