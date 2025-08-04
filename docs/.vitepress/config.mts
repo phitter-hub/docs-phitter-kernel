@@ -10,15 +10,10 @@ export default defineConfig({
             provider: "local",
         },
         nav: [
-            { text: "User Guide", link: "/documentation/intro/what-is-phitter" },
-            { text: "API Reference", link: "https://docs-phitter-kernel-api-reference.netlify.app/" },
+            { text: "Documentation", link: "/documentation/intro/what-is-phitter" },
             { text: "Releases", link: "/release/release-main" },
             { text: "Phitter Web", link: "https://phitter.io/" },
-            {
-                text: "💚 Buy Me a Coffe",
-                link: "https://buymeacoffee.com/sebastianjhm",
-                target: "_blank",
-            },
+            { text: "💚 Buy Me a Coffe", link: "https://buymeacoffee.com/sebastianjhm" },
         ],
         sidebar: {
             "/documentation/": [
@@ -29,11 +24,6 @@ export default defineConfig({
                         { text: "What is Phitter?", link: "/documentation/intro/what-is-phitter" },
                         { text: "Installation", link: "/documentation/intro/installation" },
                         { text: "Examples", link: "/documentation/intro/examples" },
-                        {
-                            text: "☕ Buy Me a Coffee",
-                            link: "https://www.buymeacoffee.com/tuusuario",
-                            target: "_blank",
-                        },
                     ],
                 },
                 {
@@ -241,13 +231,18 @@ export default defineConfig({
                         {
                             text: "Version 1",
                             collapsed: true,
-                            items: [{ text: "Version 1.0", collapsed: true, items: [
-                                { text: "What's new in v1.0.3", collapsed: true, link: "/release/v1/v1.0/v1.0.3" },
-                                { text: "What's new in v1.0.2", collapsed: true, link: "/release/v1/v1.0/v1.0.2" },
-                                { text: "What's new in v1.0.1", collapsed: true, link: "/release/v1/v1.0/v1.0.1" },
-                                { text: "What's new in v1.0.0", collapsed: true, link: "/release/v1/v1.0/v1.0.0" },
-                                
-                            ] }],
+                            items: [
+                                {
+                                    text: "Version 1.0",
+                                    collapsed: true,
+                                    items: [
+                                        { text: "What's new in v1.0.3", collapsed: true, link: "/release/v1/v1.0/v1.0.3" },
+                                        { text: "What's new in v1.0.2", collapsed: true, link: "/release/v1/v1.0/v1.0.2" },
+                                        { text: "What's new in v1.0.1", collapsed: true, link: "/release/v1/v1.0/v1.0.1" },
+                                        { text: "What's new in v1.0.0", collapsed: true, link: "/release/v1/v1.0/v1.0.0" },
+                                    ],
+                                },
+                            ],
                         },
                         {
                             text: "Version 0",
