@@ -7,8 +7,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
 import { useData } from "vitepress";
+import { defineComponent } from "vue";
 import DarkPhitterLogo from "../components/Icons/DarkPhitterLogo.vue";
 import LightPhitterLogo from "../components/Icons/LightPhitterLogo.vue";
 
@@ -17,12 +17,9 @@ export default defineComponent({
     components: { DarkPhitterLogo, LightPhitterLogo },
     data() {
         return {
-            isDarkTheme: false,
-            themeChangeCounter: 0,
-            reloadGalton: true,
+            isDarkTheme: true,
         };
     },
-
     created() {
         const { isDark } = useData();
         this.isDarkTheme = isDark.value;

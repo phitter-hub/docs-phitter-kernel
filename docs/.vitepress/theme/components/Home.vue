@@ -59,11 +59,10 @@ export default defineComponent({
     },
     created() {
         const { isDark } = useData();
-        this.isDarkTheme = isDark.value;
 
         this.$watch(
             () => isDark.value,
-            (newValue: boolean) => {
+            (_: boolean) => {
                 this.reinitializeGaltonBoard();
             }
         );
