@@ -1,6 +1,9 @@
 <template>
-    <LightPhitterLogo v-show="!isDarkTheme" />
-    <DarkPhitterLogo v-show="isDarkTheme" />
+    <div class="header-container">
+        <LightPhitterLogo v-show="!isDarkTheme" />
+        <DarkPhitterLogo v-show="isDarkTheme" />
+        <div class="docs-text">DOCS</div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -34,4 +37,16 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss"></style>
+<style>
+.header-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.docs-text {
+    margin-left: auto;
+    height: min-content;
+    font-size: 1rem;
+}
+</style>

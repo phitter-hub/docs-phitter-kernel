@@ -13,6 +13,11 @@ export default defineConfig({
             { text: "Documentation", link: "/documentation/intro/what-is-phitter" },
             { text: "Releases", link: "/release/release-main" },
             { text: "Phitter Web", link: "https://phitter.io/" },
+            {
+                text: "💚 Buy Me a Coffe",
+                link: "https://buymeacoffee.com/sebastianjhm",
+                target: "_blank",
+            },
         ],
         sidebar: {
             "/documentation/": [
@@ -23,6 +28,11 @@ export default defineConfig({
                         { text: "What is Phitter?", link: "/documentation/intro/what-is-phitter" },
                         { text: "Installation", link: "/documentation/intro/installation" },
                         { text: "Examples", link: "/documentation/intro/examples" },
+                        {
+                            text: "☕ Buy Me a Coffee",
+                            link: "https://www.buymeacoffee.com/tuusuario",
+                            target: "_blank",
+                        },
                     ],
                 },
                 {

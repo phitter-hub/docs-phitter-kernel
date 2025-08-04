@@ -116,6 +116,16 @@ $pad: 10px;
         @media (480px <=width <=1099px) {
             width: 400px;
         }
+
+        p {
+            font-weight: 500;
+            margin-top: 0;
+        }
+
+        @media (0px <=width <=479px) {
+            width: 100%;
+            font-size: 14px;
+        }
     }
 }
 
@@ -200,9 +210,5 @@ $pad: 10px;
             margin-top: 12px;
         }
     }
-}
-
-p {
-    font-weight: 500;
 }
 </style>
