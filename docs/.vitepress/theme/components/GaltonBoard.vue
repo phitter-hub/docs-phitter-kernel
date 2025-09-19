@@ -65,8 +65,8 @@ export default defineComponent({
             },
             // Balls Configuration
             ballsConfig: {
-                number: 1200,
-                radius: 3,
+                number: 1400,
+                radius: 2.8,
                 colors: [
                     this.getCssVariable("--galton-ball-color1"),
                     this.getCssVariable("--galton-ball-color2"),

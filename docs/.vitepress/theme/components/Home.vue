@@ -38,6 +38,8 @@ export default defineComponent({
         return {
             themeChangeCounter: 0,
             reloadGalton: true,
+            originalGaltonWidth: 400,
+            originalGaltonHeight: 700,
         };
     },
     methods: {
@@ -45,8 +47,15 @@ export default defineComponent({
             if (window.innerWidth <= 479) {
                 const container = this.$el.querySelector(".home-s1");
                 const availableWidth = container.clientWidth;
-                const scaleFactor = availableWidth / 400;
+
+                const scaleFactor = availableWidth / this.originalGaltonWidth;
+                const scaledHeight = this.originalGaltonHeight * scaleFactor;
+
                 document.documentElement.style.setProperty("--scale-factor", String(scaleFactor));
+                document.documentElement.style.setProperty("--scaled-height", `${scaledHeight}px`);
+            } else {
+                document.documentElement.style.removeProperty("--scale-factor");
+                document.documentElement.style.removeProperty("--scaled-height");
             }
         },
         reinitializeGaltonBoard() {
@@ -83,8 +92,9 @@ $pad: 10px;
     display: flex;
     margin-top: 80px;
 
-    @media (0px <=width <=479px) {
-        margin-top: 20px;
+    @media (0px <= width <=479px) {
+        margin-top: 10px;
+        padding: 20px;
     }
 
     @media (0px <=width <=1099px) {
@@ -116,14 +126,37 @@ $pad: 10px;
             width: 400px;
         }
 
-        p {
-            font-weight: 500;
-            margin-top: 0;
-        }
+        & .description-container {
+            margin-top: 3rem;
+            h2 {
+                font-size: var(--font-size-1);
+                text-transform: uppercase;
+                font-weight: bolder;
+                margin-top: 2rem;
+                border-bottom: 1.5px solid var(--font-color-2);
+                padding-bottom: 0.5rem;
+            }
 
-        @media (0px <=width <=479px) {
-            width: 100%;
-            font-size: 14px;
+            p {
+                font-size: var(--font-size-1);
+                // font-weight: 500;
+                margin-top: 0.6rem;
+            }
+
+            .equation {
+                font-size: var(--font-size-equation-3);
+                color: var(--font-color-2);
+                margin-top: 0.8rem;
+                // width: max-content;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media (0px <= width <= 599px) {
+                    font-size: var(--font-size-equation-2);
+                }
+            }
         }
     }
 }
@@ -131,7 +164,7 @@ $pad: 10px;
 .home-s2 {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 50px + $pad;
 
     @media (1100px <= width) {
@@ -144,9 +177,15 @@ $pad: 10px;
         padding-left: 0px;
     }
 
-    & .galton-board {
+    @media (0px <=width <=479px) {
+        height: var(--scaled-height, auto);
+        margin-bottom: -86px;
+    }
+
+    .galton-board {
+        display: inline-block;
         @media (0px <=width <=479px) {
-            transform: scale(var(--scale-factor));
+            transform: scale(var(--scale-factor, 1));
             transform-origin: top center;
         }
     }

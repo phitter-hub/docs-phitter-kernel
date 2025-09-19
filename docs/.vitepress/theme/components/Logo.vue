@@ -15,25 +15,14 @@ import LightPhitterLogo from "../components/Icons/LightPhitterLogo.vue";
 export default defineComponent({
     name: "Logo",
     components: { DarkPhitterLogo, LightPhitterLogo },
-    data() {
-        return {
-            isDarkTheme: true,
-        };
-    },
-    created() {
+    setup() {
         const { isDark } = useData();
-        this.isDarkTheme = isDark.value;
-
-        this.$watch(
-            () => isDark.value,
-            (newValue: boolean) => {
-                this.isDarkTheme = newValue;
-            }
-        );
+        return {
+            isDarkTheme: isDark,
+        };
     },
 });
 </script>
-
 <style>
 .header-container {
     display: flex;
