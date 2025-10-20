@@ -29,7 +29,7 @@ best_dist = phi.best_distribution
 # best_dist -> {"id": "binomial", "parameters": {"p": 0.38, "n": 10}}
 ```
 
-### 2. `phi.sorted_distributions_sse`
+### 2. `phi.sorted_distributions`
 
 Yields a dictionary of all fitted distributions, sorted primarily by the number of tests passed (descending), and secondarily by SSE (ascending). This structure contains each distribution’s parameters, SSE, and statistical test outcomes.
 
@@ -38,7 +38,7 @@ Yields a dictionary of all fitted distributions, sorted primarily by the number 
 **Usage Example**
 
 ```python
-all_distributions = phi.sorted_distributions_sse
+all_distributions = phi.sorted_distributions
 # all_distributions -> {
 #   "binomial": {
 #       "sse": 0.0123,
@@ -55,7 +55,7 @@ all_distributions = phi.sorted_distributions_sse
 
 ### 3. `phi.not_rejected_distributions`
 
-Provides a dictionary of all distributions that have passed at least one statistical test (i.e., have not been rejected by all tests). This is a subset of `sorted_distributions_sse`.
+Provides a dictionary of all distributions that have passed at least one statistical test (i.e., have not been rejected by all tests). This is a subset of `sorted_distributions`.
 
 **Type**  
 `dict[str, dict]`  
@@ -75,16 +75,16 @@ valid_distributions = phi.not_rejected_distributions
 # }
 ```
 
-### 4. `phi.df_sorted_distributions_sse`
+### 4. `phi.df_sorted_distributions`
 
-Presents the same information as `phi.sorted_distributions_sse`, but in a `pandas.DataFrame` format for easier viewing and manipulation. Columns include distribution name, SSE, parameter strings, and test results.
+Presents the same information as `phi.sorted_distributions`, but in a `pandas.DataFrame` format for easier viewing and manipulation. Columns include distribution name, SSE, parameter strings, and test results.
 
 **Type**  
 `pandas.DataFrame`  
 **Usage Example**
 
 ```python
-df_sse = phi.df_sorted_distributions_sse
+df_sse = phi.df_sorted_distributions
 df_sse.head(n=5)
 # Returns a DataFrame with columns for distribution,
 # SSE, parameters, and test outcomes.
@@ -231,7 +231,7 @@ phi.get_n_test_null("binomial")
 ## Additional Notes
 
 -   The default discrete fitting process includes the Chi-Square test and the Kolmogorov-Smirnov test. The Anderson-Darling test is part of the code interface but may be unsupported for certain discrete distributions.
--   If fitting fails or if no distributions pass the set criteria, the outputs for certain methods or properties (such as `df_sorted_distributions_sse` or `best_distribution`) might be empty or raise exceptions.
+-   If fitting fails or if no distributions pass the set criteria, the outputs for certain methods or properties (such as `df_sorted_distributions` or `best_distribution`) might be empty or raise exceptions.
 
 **Example Usage in a Discrete Setting**
 

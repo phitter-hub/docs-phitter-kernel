@@ -74,12 +74,12 @@ phi.best_distribution
 # }
 ```
 
-### 4. `phi.sorted_distributions_sse -> dict`
+### 4. `phi.sorted_distributions -> dict`
 
 Provides a dictionary in which the keys are distribution identifiers and the values are nested dictionaries with metrics such as parameters, SSE, and the results of the statistical tests. The items are sorted primarily by the number of tests passed, then by the sum of squared errors.
 
 ```python
-phi.sorted_distributions_sse
+phi.sorted_distributions
 # -> {
 #    "weibull": {
 #       "chi_square": {...},
@@ -99,7 +99,7 @@ phi.sorted_distributions_sse
 
 ### 5. `phi.not_rejected_distributions -> dict`
 
-Provides a dictionary structured similarly to `phi.sorted_distributions_sse`, containing only those distributions that have passed at least one statistical test (i.e., were not fully rejected).
+Provides a dictionary structured similarly to `phi.sorted_distributions`, containing only those distributions that have passed at least one statistical test (i.e., were not fully rejected).
 
 ```python
 phi.not_rejected_distributions
@@ -111,12 +111,12 @@ phi.not_rejected_distributions
 # }
 ```
 
-### 6. `phi.df_sorted_distributions_sse -> pandas.DataFrame`
+### 6. `phi.df_sorted_distributions -> pandas.DataFrame`
 
-Generates a Pandas DataFrame representation of `phi.sorted_distributions_sse`. All distributions that were successfully fitted are included, organized by metrics and test results in a multi-index column structure.
+Generates a Pandas DataFrame representation of `phi.sorted_distributions`. All distributions that were successfully fitted are included, organized by metrics and test results in a multi-index column structure.
 
 ```python
-phi.df_sorted_distributions_sse.head(10)
+phi.df_sorted_distributions.head(10)
 # -> Shows the top 10 distributions based on sum of squared errors (SSE) and test passes
 ```
 
@@ -259,7 +259,7 @@ phi.get_n_test_null("weibull")
 
 5. **DataFrame of All Fitted Distributions**
     ```python
-    df_all = phi.df_sorted_distributions_sse
+    df_all = phi.df_sorted_distributions
     display(df_all.head(10))
     ```
 
