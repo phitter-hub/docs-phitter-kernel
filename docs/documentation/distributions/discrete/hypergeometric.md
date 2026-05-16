@@ -73,7 +73,7 @@ $$ \mathrm{Median}(X)=F^{-1}_{X}\left(0.5\right) $$
 $$ \mathrm{Mode}(X)=\left \lfloor \frac{(n+1)(K+1)}{N+2} \right \rfloor $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function} \\ \text{is not feasible. However, it is possible to calculate the Percentile Point Function by} \\ \text{approximating it to the nearest integer.}$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function}$ $\text{is not feasible. However, it is possible to calculate the Percentile Point Function by}$ $\text{approximating it to the nearest integer.}$
 - $u:\text{Uniform[0,1] random varible}$
 - $\lfloor{x}\rfloor: \text{Floor function}$
 - $\lceil{x}\rceil: \text{Ceiling Function}$

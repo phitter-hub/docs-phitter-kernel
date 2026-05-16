@@ -73,7 +73,7 @@ $$ \mathrm{Median}(X)=F^{-1}_{X}\left(0.5\right) $$
 $$ \mathrm{Mode}(X)=\lfloor(r-1)\,(1-p)/p\rfloor $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function} \\ \text{is not feasible. However, it is possible to calculate the Percentile Point Function by} \\ \text{approximating it to the nearest integer.}$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function}$ $\text{is not feasible. However, it is possible to calculate the Percentile Point Function by}$ $\text{approximating it to the nearest integer.}$
 - $u:\text{Uniform[0,1] random varible}$
 - $I\left(x,a,b\right):\text{Regularized incomplete beta function}$
 - $\lfloor{x}\rfloor: \text{Floor function}$
@@ -83,7 +83,7 @@ $$ \mathrm{Mode}(X)=\lfloor(r-1)\,(1-p)/p\rfloor $$
 -   [Phitter playground](https://phitter.io/distributions/discrete/negative_binomial)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/discrete/negative_binomial.xlsx)
--   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1xmCWBiswdW5s7SIhwT2nrdQxLFAb6hw73iy52_nvjQE)
+-   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1aMVwtzlhr6klLqIUnUTM1pQ_L94zOWut8Hwy7okKe3E)
 
 <script setup>
 const downloadExcelFile = function() {

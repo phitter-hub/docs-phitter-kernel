@@ -73,8 +73,8 @@ $$ \mathrm{Median}(X)=F^{-1}_{X}\left(\frac{1}{2}\right) $$
 $$ \mathrm{Mode}(X)=\arg\max_{x}f_{X}\left(x\right) $$
 
 **Additional Information and Definitions**
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not}$ $\text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
 - $\tilde{X}\sim\mathrm{NonCentralTStudent}\left(\lambda,n,0,1\right)$
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not} \\ \text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
 - $\text{Loc}:\text{Location parameter}$
 - $\text{Sc}:\text{Scale parameter}$
 - $z\left(x\right)=\left(x-\text{Loc}\right)/\text{Sc}$
@@ -108,5 +108,4 @@ a {
   cursor: pointer;
 }
 </style>
-
     

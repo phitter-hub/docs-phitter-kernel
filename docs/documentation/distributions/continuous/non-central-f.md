@@ -73,7 +73,7 @@ $$ \mathrm{Median}(X)=F^{-1}_{X}\left(\frac{1}{2}\right) $$
 $$ \mathrm{Mode}(X)=\arg\max_{x}f_{X}\left(x\right) $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not} \\ \text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not}$ $\text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
 - $u:\text{Uniform[0,1] random varible}$
 - $u_{i}:\text{Uniform[0,1] random varible}$
 - $\Phi^{-1}\left(x\right):\text{PPF normal standard distribution}$
@@ -106,5 +106,4 @@ a {
   cursor: pointer;
 }
 </style>
-
     

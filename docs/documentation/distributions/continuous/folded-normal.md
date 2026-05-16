@@ -73,7 +73,7 @@ $$ \mathrm{Median}(X)=\left|\mu+\sigma\Phi^{-1}\left(1/2\right)\right| $$
 $$ \mathrm{Mode}(X)=\arg\max_{x}f_{X}\left(x\right) $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not} \\ \text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not}$ $\text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
 - $\mu:\text{Location parameter}$
 - $\sigma:\text{Scale parameter}$
 - $u:\text{Uniform[0,1] random varible}$
@@ -106,5 +106,4 @@ a {
   cursor: pointer;
 }
 </style>
-
     

@@ -73,7 +73,7 @@ $$ \mathrm{Median}(X)=F^{-1}_{X}\left(\frac{1}{2}\right) $$
 $$ \mathrm{Mode}(X)=\text{Loc}+\mu\left[\left(1+\frac{9 \mu^2}{4 \lambda^2}\right)^\frac{1}{2}-\frac{3 \mu}{2 \lambda}\right] $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not} \\ \text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not}$ $\text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
 - $\text{Loc}:\text{Location parameter}$
 - $\Phi\left(x\right):\text{CDF normal standard distribution}$
 - $\Phi^{-1}\left(x\right):\text{PPF normal standard distribution}$
@@ -106,5 +106,4 @@ a {
   cursor: pointer;
 }
 </style>
-
     

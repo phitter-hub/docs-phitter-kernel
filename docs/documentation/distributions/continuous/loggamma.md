@@ -37,7 +37,7 @@ distribution.mode # -> float
 $$ X\sim\mathrm{LogGamma}\left(c,\mu,\sigma\right) $$
 
 **Distribution Domain**
-$$ x\in\left(0,\infty\right) $$
+$$ x\in\left(-\infty,\infty\right) $$
 
 **Parameters Domain and Constraints**
 $$ c\in\mathbb{R}^{+}, \mu\in\mathbb{R}, \sigma\in\mathbb{R}^{+} $$
@@ -109,5 +109,4 @@ a {
   cursor: pointer;
 }
 </style>
-
     

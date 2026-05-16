@@ -73,7 +73,7 @@ $$ \mathrm{Median}(X)=F^{-1}_{X}\left(\frac{1}{2}\right) $$
 $$ \mathrm{Mode}(X)=\arg\max_{x}f_{X}\left(x\right) $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not} \\ \text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function is not}$ $\text{feasible. Nonetheless, it is possible to generate a random sample from the distribution.}$
 - $\Phi^{-1}\left(u,mean,variance\right):\text{Inverse of cumulative function from normal distribution}$
 - $L_{r}\left(x\right): \text{Laguerre polynomials of order }r\in\mathbb{R}$
 - $L_{\frac{1}{2}}\left(x\right)=e^{x/2} (x) I_{1}\left(\frac{x}{2}\right)-e^{x/2} (x-1) I_{0}\left(\frac{x}{2}\right)$
@@ -108,5 +108,4 @@ a {
   cursor: pointer;
 }
 </style>
-
     

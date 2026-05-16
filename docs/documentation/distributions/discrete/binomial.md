@@ -73,7 +73,7 @@ $$ \mathrm{Median}(X)=\lfloor{np}\rfloor \vee \lceil{np}\rceil $$
 $$ \mathrm{Mode}(X)=\lfloor (n + 1)p \rfloor \vee \lceil (n + 1)p \rceil - 1 $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function} \\ \text{is not feasible. However, it is possible to calculate the Percentile Point Function by} \\ \text{approximating it to the nearest integer.}$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function}$ $\text{is not feasible. However, it is possible to calculate the Percentile Point Function by}$ $\text{approximating it to the nearest integer.}$
 - $u:\text{Uniform[0,1] random varible}$
 - $\lfloor{x}\rfloor: \text{Floor function}$
 - $\lceil{x}\rceil: \text{Ceiling Function}$

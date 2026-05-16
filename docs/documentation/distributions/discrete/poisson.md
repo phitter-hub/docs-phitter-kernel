@@ -73,7 +73,7 @@ $$ \mathrm{Median}(X)=\lfloor\lambda+1/3-0.02/\lambda\rfloor $$
 $$ \mathrm{Mode}(X)=\lfloor\lambda\rfloor $$
 
 **Additional Information and Definitions**
-- $\text{Computing an analytic expression for the inverse of the cumulative distribution function} \\ \text{is not feasible. However, it is possible to calculate the Percentile Point Function by} \\ \text{approximating it to the nearest integer.}$
+- $\text{Computing an analytic expression for the inverse of the cumulative distribution function}$ $\text{is not feasible. However, it is possible to calculate the Percentile Point Function by}$ $\text{approximating it to the nearest integer.}$
 - $u:\text{Uniform[0,1] random varible}$
 - $\lfloor{x}\rfloor: \text{Floor function}$
 - $P\left(a,x \right)=\frac{\gamma(a,x)}{\Gamma(a)}:\text{Regularized lower incomplete gamma function}$
@@ -84,7 +84,7 @@ $$ \mathrm{Mode}(X)=\lfloor\lambda\rfloor $$
 -   [Phitter playground](https://phitter.io/distributions/discrete/poisson)
 -   <a @click="downloadExcelFile">Download Excel Spreadsheet</a>
 -   [Excel file from GitHub repository](https://github.com/phitter-core/phitter-files/blob/main/discrete/poisson.xlsx)
--   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1fwoe70JH5Ve6sETb7AwBdb4eep_h2DeGlpHIWcHeZA8)
+-   [Google spreadsheet document](https://docs.google.com/spreadsheets/d/1Co94PVfvX3o4sMYQj8UeFiCLdzB-QecwnfYoqp9Ljcs)
 
 <script setup>
 const downloadExcelFile = function() {
